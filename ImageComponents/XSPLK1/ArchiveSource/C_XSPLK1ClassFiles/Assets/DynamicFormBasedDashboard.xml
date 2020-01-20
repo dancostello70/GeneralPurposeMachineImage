@@ -1,0 +1,122 @@
+<form>
+  <label>Dynamic Form-Based Dashboard</label>
+  <fieldset submitButton="false" autoRun="true">
+    <input type="time" token="time" searchWhenChanged="true">
+      <label>Select Time Range</label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="radio" token="server" searchWhenChanged="true">
+      <label>Select Server:</label>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+      <initialValue>*</initialValue>
+      <fieldForLabel>server_ip</fieldForLabel>
+      <fieldForValue>server_ip</fieldForValue>
+      <search>
+        <query>index=main | top server_ip</query>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </search>
+    </input>
+    <input type="radio" token="status_type" searchWhenChanged="true">
+      <label>Select Status Type:</label>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+      <initialValue>*</initialValue>
+      <fieldForLabel>status_type</fieldForLabel>
+      <fieldForValue>status_type</fieldForValue>
+      <search>
+        <query>index=main | top status_type</query>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </search>
+    </input>
+    <input type="dropdown" token="http_uri" searchWhenChanged="true">
+      <label>Select HTTP URI:</label>
+      <choice value="*">ALL</choice>
+      <default>*</default>
+      <initialValue>*</initialValue>
+      <fieldForLabel>http_uri</fieldForLabel>
+      <fieldForValue>http_uri</fieldForValue>
+      <search>
+        <query>index=main | top 0 http_uri</query>
+        <earliest>-4h@m</earliest>
+        <latest>now</latest>
+      </search>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Status Types by URI</title>
+      <table>
+        <search>
+          <query>index=main status_type=$status_type$ http_uri=$http_uri$ server_ip=$server$ | top status_type, status_description, http_uri, server_ip</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="count">20</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Status Distribution</title>
+      <chart>
+        <search>
+          <query>index=main status_type=$status_type$ http_uri=$http_uri$ server_ip=$server$ | top status_type</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Status Types Over Time</title>
+      <chart>
+        <search>
+          <query>index=main status_type=$status_type$ http_uri=$http_uri$ server_ip=$server$ | timechart count by http_status_code</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.chart">area</option>
+        <option name="charting.chart.nullValueMode">zero</option>
+        <option name="charting.chart.stackMode">stacked</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>Hits vs Response Time</title>
+      <chart>
+        <search>
+          <query>index=main status_type=$status_type$ http_uri=$http_uri$ server_ip=$server$ | timechart count, avg(http_response_time) as response_time</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisY2.enabled">1</option>
+        <option name="charting.chart">column</option>
+        <option name="charting.chart.overlayFields">response_time</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+</form>

@@ -1,0 +1,5 @@
+# Ignore all .exe and .zip files
+
+*.exe
+*.zip
+*.msi
