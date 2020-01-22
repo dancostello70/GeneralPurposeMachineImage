@@ -3,5 +3,7 @@
 *.exe
 *.zip
 *.msi
+*.tgz
 
 ImageComponents/
+BigFiles/
