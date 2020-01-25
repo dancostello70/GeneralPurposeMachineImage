@@ -1,10 +1,13 @@
 @echo off
+:: Setup file for XSPLK2 (Splunk Fundamentals Level 2)
+:: Version 2.0
+:: Author: Dan Costello (dan@costellotech.com)
 
 SET SETUPDIR=%SETUPROOT%\XSPLK2
 
 echo Beginning setup of XSPLK2
 
-:: Extract archives
+:: Download files
 echo Downloading files
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\DownloadFiles.ps1
 
@@ -29,8 +32,4 @@ msiexec.exe /I splunk-8.0.1-6db836e2fb9e-x64-release.msi SPLUNKUSERNAME=admin SP
 echo Installing Java JRE
 jre-8u231-windows-x64.exe /s
 
-:: Set CURL path
-:: Actually gonna comment this out for now...
-:: echo Setting CURL path
-:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\SetCURLPath.ps1
 

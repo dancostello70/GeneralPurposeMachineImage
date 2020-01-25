@@ -2,3 +2,4 @@
 2. Power BI Intermediate (BPBINT),BPBINT
 3. Splunk Fundamentals Level 1 (XSPLK1),XSPLK1
 4. Splunk Fundamentals Level 2 (XSPLK2),XSPLK2
+5. Tableau Prep Introduction (XTBP10),XTBP10
