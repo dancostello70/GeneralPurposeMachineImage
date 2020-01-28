@@ -20,6 +20,9 @@ echo Downloading files
 echo (Please be patient -- the files for this class are quite large)
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\DownloadFiles.ps1
 
+echo Downloads complete >> %LOGFILE%
+time /t >> %LOGFILE%
+
 :: Extract archives
 echo Extracting archives
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\ExtractArchives.ps1
