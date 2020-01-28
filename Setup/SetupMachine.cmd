@@ -4,4 +4,4 @@ powershell -ExecutionPolicy Bypass -File %SETUPROOT%\InitSetup.ps1
 
 call %SETUPROOT%\StartSelectedClassSetup.cmd
 
-pause
+IF NOT "%SETUP_DEBUG%"=="" IF NOT "%SETUP_DEBUG%"=="0" pause
