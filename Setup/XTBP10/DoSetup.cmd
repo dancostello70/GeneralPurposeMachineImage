@@ -46,5 +46,4 @@ TableauDesktop-64bit-2019-4-1.exe /quiet /norestart /log %SETUPDIR%\TableauDeskt
 
 :: Log process complete
 echo Setup completed >> %LOGFILE%
-date /t >> %LOGFILE%
 time /t >> %LOGFILE%

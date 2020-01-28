@@ -1,4 +1,6 @@
-﻿$selectedClassId = "XTBP10"
+﻿# Download files for XTBP10 (Tableau Prep Intro)
+
+$selectedClassId = "XTBP10"
 $classSetupRoot = "$env:SETUPROOT\$selectedClassId"
 
 $fileList = Import-Csv "$classSetupRoot\FileDownloadList.csv"
