@@ -1,7 +1,7 @@
 @echo off
 :: Setup file for XTBP10 (Tableau Prep Introduction)
-:: Version 1.1
-:: Last update: 27 Jan 2020
+:: Version 1.2
+:: Last update: 29 Jan 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
 SET SETUPDIR=%SETUPROOT%\XTBP10
@@ -43,6 +43,10 @@ TableauPrep-2020-1-1.exe /quiet /norestart /log %SETUPDIR%\TableauPrepSetupLog.l
 
 echo Installing Tableau Desktop
 TableauDesktop-64bit-2019-4-1.exe /quiet /norestart /log %SETUPDIR%\TableauDesktopSetupLog.log ACCEPTEULA=1
+
+:: Install databases
+echo Setting up SQL Server databases
+call %CLASSDIR%\Setup\Setup.cmd
 
 :: Log process complete
 echo Setup completed >> %LOGFILE%
