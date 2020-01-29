@@ -48,6 +48,9 @@ TableauDesktop-64bit-2019-4-1.exe /quiet /norestart /log %SETUPDIR%\TableauDeskt
 echo Setting up SQL Server databases
 call %CLASSDIR%\Setup\Setup.cmd
 
+:: Send an alert
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\SendAlert.ps1
+
 :: Log process complete
 echo Setup completed >> %LOGFILE%
 time /t >> %LOGFILE%
