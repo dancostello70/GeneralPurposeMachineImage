@@ -23,6 +23,10 @@ TableauPrep-2020-1-1.exe /uninstall /quiet
 echo Installing Tableau Desktop
 TableauDesktop-64bit-2019-4-1.exe /uninstall /quiet
 
+:: Remove databases
+echo Removing SQL Server databases
+call %CLASSDIR%\Setup\DropDBs.cmd
+
 :: Delete stuff
 cd %SETUPROOT%
 rmdir /s /q %SETUPDIR%
