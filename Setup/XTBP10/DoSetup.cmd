@@ -1,7 +1,7 @@
 @echo off
 :: Setup file for XTBP10 (Tableau Prep Introduction)
-:: Version 1.3
-:: Last update: 2 Feb 2020
+:: Version 1.2
+:: Last update: 29 Jan 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
 SET SETUPDIR=%SETUPROOT%\XTBP10
@@ -48,8 +48,8 @@ TableauDesktop-64bit-2019-4-1.exe /quiet /norestart /log %SETUPDIR%\TableauDeskt
 echo Setting up SQL Server databases
 call %CLASSDIR%\Setup\Setup.cmd
 
-:: Send report completion message
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\SendReport.ps1
+:: Send an alert
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\SendAlert.ps1
 
 :: Log process complete
 echo Setup completed >> %LOGFILE%
