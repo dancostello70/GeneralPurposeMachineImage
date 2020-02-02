@@ -1,5 +1,5 @@
-﻿$subject = "XTBP10 BUild Complete"
-$message = ("Build completed at {0}" -f $(Get-Date))
+﻿$subject = "XTBP10 Setup Complete"
+$message = ("Setup completed at {0} on {1}" -f $(Get-Date),$env:COMPUTERNAME)
 
 $body = ConvertTo-Json @{
     "subject"=$subject
