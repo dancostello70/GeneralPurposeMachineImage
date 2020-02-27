@@ -1,8 +1,8 @@
-﻿# Update class files for XTBP10 (Tableau Prep Introduction)
+﻿# Update class files for __CLASSID__ (__ClassName__)
 
-$repoName = "XTBP10---Tableau-Prep-Introduction"
+$repoName = "__RepoName__"
 $ArchiveURI = "https://github.com/CostelloTechnicalConsulting/$repoName/archive/master.zip"
-$targetDir = "C:\XTBP10ClassFiles\"
+$targetDir = "C:\__CLASSID__ClassFiles\"
 
 Invoke-WebRequest -UseBasicParsing -Uri $ArchiveURI -OutFile $env:TEMP\repo_temp.zip
 
