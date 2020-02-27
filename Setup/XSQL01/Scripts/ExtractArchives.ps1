@@ -1,6 +1,7 @@
-﻿# Extract archives for XTBP10 (Tableau Prep Intro)
+﻿# Extract archives for __CLASSID__ (__ClassName__)
+param($ClassId)
 
-$selectedClassId = "XTBP10"
+$selectedClassId = $ClassId
 $classSetupRoot = "$env:SETUPROOT\$selectedClassId"
 
 $archiveList = Import-Csv "$classSetupRoot\ArchiveList.csv"

@@ -1,8 +1,11 @@
 ﻿# Update class files for __CLASSID__ (__ClassName__)
+param($ClassId)
+
+$selectedClassId = $ClassId
 
 $repoName = "__RepoName__"
 $ArchiveURI = "https://github.com/CostelloTechnicalConsulting/$repoName/archive/master.zip"
-$targetDir = "C:\__CLASSID__ClassFiles\"
+$targetDir = "C:\$selectedClassIdClassFiles\"
 
 Invoke-WebRequest -UseBasicParsing -Uri $ArchiveURI -OutFile $env:TEMP\repo_temp.zip
 

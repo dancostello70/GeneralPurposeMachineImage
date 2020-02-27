@@ -1,10 +1,10 @@
 @echo off
-:: Setup file for __ClassID__ (__ClassName__)
+:: Setup file for XSQL01 (SQL Querying: Fundamentals)
 :: Version 1.0
 :: Last update: 27 Feb 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
-SET CLASSID=__ClassID__
+SET CLASSID=XSQL01
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\%CLASSID%ClassFiles

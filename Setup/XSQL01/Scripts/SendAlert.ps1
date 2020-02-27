@@ -1,4 +1,8 @@
-﻿$subject = "XTBP10 Setup Complete"
+﻿param($ClassId)
+
+$selectedClassId = $ClassId
+
+$subject = "$selectedClassId Setup Complete"
 $message = ("Setup completed at {0} on {1}" -f $(Get-Date),$env:COMPUTERNAME)
 
 $body = ConvertTo-Json @{
