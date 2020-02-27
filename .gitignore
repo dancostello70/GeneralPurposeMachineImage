@@ -3,3 +3,6 @@
 *.exe
 *.zip
 *.msi
+*.tgz
+*.jar
+ImageComponents/XSPLK2/ArchiveSource/*
