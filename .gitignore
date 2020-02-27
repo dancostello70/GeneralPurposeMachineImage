@@ -4,5 +4,7 @@
 *.zip
 *.msi
 *.tgz
-*.jar
-ImageComponents/XSPLK2/ArchiveSource/*
+
+ImageComponents/
+BigFiles/
+ExtraStuff/

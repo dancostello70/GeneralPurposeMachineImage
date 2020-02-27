@@ -1,4 +1,6 @@
-﻿$selectedClassId = "XSPLK2"
+﻿# Extract archives for XTBP10 (Tableau Prep Intro)
+
+$selectedClassId = "XTBP10"
 $classSetupRoot = "$env:SETUPROOT\$selectedClassId"
 
 $archiveList = Import-Csv "$classSetupRoot\ArchiveList.csv"
