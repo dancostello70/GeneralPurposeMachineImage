@@ -28,6 +28,9 @@ time /t >> %LOGFILE%
 echo Extracting archives
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\ExtractArchives.ps1 -ClassId %CLASSID%
 
+:: Move the class directory to the right place
+ move C:\094018Files1_0\094018Data c:\
+
 :: Update from GitHub
 :: echo Updating from GitHub
 :: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1 -ClassId %CLASSID%
