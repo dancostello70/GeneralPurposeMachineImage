@@ -3,7 +3,7 @@ $sourcePath = "$PSScriptRoot\ImageComponents"
 
 cd $sourcePath
 
-if($false){
+if($true){
 
 $classId = "XSPLK1"
 
@@ -24,7 +24,7 @@ if($false){
 #Compress-Archive ./XSPLK1 -DestinationPath "$targetPath/XSPLK1.zip"
 }
 
-if($true){
+if($false){
 
     $classId = "XSPLK2"
 
