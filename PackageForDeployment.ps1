@@ -11,9 +11,10 @@ cd $setupPath
 
 #Compress-Archive -Force ./20778C -DestinationPath "$targetPath/20778C.zip"
 #Compress-Archive -Force ./BPBINT -DestinationPath "$targetPath/BPBINT.zip"
-#Compress-Archive -Force ./XSPLK1 -DestinationPath "$targetPath/XSPLK1.zip"
+Compress-Archive -Force ./XSPLK1 -DestinationPath "$targetPath/XSPLK1.zip"
 #Compress-Archive -Force ./XSPLK2 -DestinationPath "$targetPath/XSPLK2.zip"
-Compress-Archive -Force ./XTBP10 -DestinationPath "$targetPath/XTBP10.zip"
+#Compress-Archive -Force ./XTBP10 -DestinationPath "$targetPath/XTBP10.zip"
+#Compress-Archive -Force ./XSQL01 -DestinationPath "$targetPath/XSQL01.zip"
 
 cd $bigFilesPath
 
@@ -25,3 +26,6 @@ cd $bigFilesPath
 #Compress-Archive -Force ./Setup_XTBP10_Installers_2/* -DestinationPath "$zipArchivePath/Setup_XTBP10_Installers_2.zip"
 #Compress-Archive -Force ./c_XTBP10ClassFiles_BIG/* -DestinationPath "$zipArchivePath/c_XTBP10ClassFiles_BIG.zip"
 #Compress-Archive -Force ./Setup_ANY_Installers_TableauServer/* -DestinationPath "$zipArchivePath/Setup_ANY_Installers_TableauServer.zip"
+
+
+cd $setupPath
