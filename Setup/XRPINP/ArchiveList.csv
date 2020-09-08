@@ -1,2 +1,6 @@
 Archive,TargetPath
-__ArchiveFile__.zip,C:\Setup\__ClassDir__\__TargetFolder__
+Setup_ANY_Installers_microsoft-r-open-3-5-3.zip,C:\Setup\XRPINP\Installers
+Setup_ANY_Installers_RStudio-1-3.zip,C:\Setup\XRPINP\Installers
+Setup_ANY_Installers_TableauDesktop-2020-3.zip,C:\Setup\XRPINP\Installers
+Setup_ANY_Installers_PBIDesktop-2-84.zip,C:\Setup\XRPINP\Installers
+XRPINPClassFiles_learningr_0.29.1.zip,C:\XRPINPClassFiles

@@ -1,7 +1,7 @@
 @echo off
-:: Setup file for __ClassID__ (__ClassName__)
+:: Setup file for XRPINP (R Programming Introduction)
 :: Version 1.0
-:: Last update: 27 Feb 2020
+:: Last update: 8 Sep 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
 SET CLASSID=XRPINP
@@ -29,8 +29,8 @@ echo Extracting archives
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\ExtractArchives.ps1 -ClassId %CLASSID%
 
 :: Update from GitHub
-echo Updating from GitHub
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1 -ClassId %CLASSID%
+:: echo Updating from GitHub
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1 -ClassId %CLASSID%
 
 :: Copy Desktop Files
 echo Copying desktop files
@@ -39,8 +39,17 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Do installations
 cd %SETUPDIR%\Installers
 
-echo Installing __Application__
-__ApplicationSpecificInstallerCommandLine__
+echo Installing MRAN
+microsoft-r-open-3.5.3.exe /quiet
+
+echo Installing RStudio
+RStudio-1.3.1073.exe /S
+
+echo Installing Tableau Desktop
+TableauDesktop-64bit-2020-3-0.exe /quiet /norestart /log %SETUPDIR%\TableauDesktopSetupLog.log ACCEPTEULA=1
+
+echo Installing Power BI Desktop
+%SETUPDIR%\PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
 :: Install databases
 echo Setting up SQL Server databases
