@@ -4,6 +4,8 @@
 :: Last update: 8 Sep 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
+IF NOT DEFINED SETUPROOT SET SETUPROOT=C:\SETUP
+
 SET CLASSID=XRPINP
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
@@ -49,11 +51,11 @@ echo Installing Tableau Desktop
 TableauDesktop-64bit-2020-3-0.exe /quiet /norestart /log %SETUPDIR%\TableauDesktopSetupLog.log ACCEPTEULA=1
 
 echo Installing Power BI Desktop
-%SETUPDIR%\PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
+PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
 :: Install databases
-echo Setting up SQL Server databases
-call %SETUPDIR%\Scripts\SetupDbs.cmd
+:: echo Setting up SQL Server databases
+:: call %SETUPDIR%\Scripts\SetupDbs.cmd
 
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
