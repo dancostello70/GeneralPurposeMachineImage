@@ -5,7 +5,7 @@ $selectedClassId = $ClassId
 
 $repoName = "XRPINPClassFiles"
 $ArchiveURI = "https://github.com/CostelloTechnicalConsulting/$repoName/archive/master.zip"
-$targetDir = "C:\$selectedClassIdClassFiles\"
+$targetDir = "C:\" + $selectedClassId + "ClassFiles\"
 
 Invoke-WebRequest -UseBasicParsing -Uri $ArchiveURI -OutFile $env:TEMP\repo_temp.zip
 

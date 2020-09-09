@@ -10,4 +10,4 @@ SET CLASSDIR=C:\XRPINPClassFiles
 
 :: Update from GitHub
 echo Updating from GitHub
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\UpdateClassfilesFromGithub.ps1
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1-ClassId %CLASSID%
