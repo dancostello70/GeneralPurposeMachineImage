@@ -20,6 +20,9 @@ cd %SETUPDIR%\Installers
 echo Uninstalling Tableau Desktop
 TableauDesktop-64bit-2020-3-0.exe /uninstall /quiet
 
+echo Uninstalling Power BI Desktop
+PBIDesktopSetup_x64.exe /uninstall /quiet
+
 :: Delete stuff
 cd %SETUPROOT%
 rmdir /s /q %SETUPDIR%
