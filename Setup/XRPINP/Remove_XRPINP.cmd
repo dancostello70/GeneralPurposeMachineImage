@@ -23,6 +23,12 @@ TableauDesktop-64bit-2020-3-0.exe /uninstall /quiet
 echo Uninstalling Power BI Desktop
 PBIDesktopSetup_x64.exe /uninstall /quiet
 
+echo Uninstalling RStudio
+%ProgramFiles%\RStudio\Uninstall.exe /S
+
+echo Uninstalling MRAN
+microsoft-r-open-3.5.3.exe /uninstall /quiet
+
 :: Delete stuff
 cd %SETUPROOT%
 rmdir /s /q %SETUPDIR%
