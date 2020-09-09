@@ -4,3 +4,4 @@
 4. Splunk Fundamentals Level 2 (XSPLK2),XSPLK2
 5. Tableau Prep Introduction (XTBP10),XTBP10
 6. SQL Querying: Fundamentals (XSQL01),XSQL01
+7. Power BI for Excel Users etc. (BPBEX1-BPQM01-WEXF16),BPBEX1

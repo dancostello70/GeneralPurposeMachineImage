@@ -11,10 +11,11 @@ cd $setupPath
 
 #Compress-Archive -Force ./20778C -DestinationPath "$targetPath/20778C.zip"
 #Compress-Archive -Force ./BPBINT -DestinationPath "$targetPath/BPBINT.zip"
-Compress-Archive -Force ./XSPLK1 -DestinationPath "$targetPath/XSPLK1.zip"
+#Compress-Archive -Force ./XSPLK1 -DestinationPath "$targetPath/XSPLK1.zip"
 #Compress-Archive -Force ./XSPLK2 -DestinationPath "$targetPath/XSPLK2.zip"
 #Compress-Archive -Force ./XTBP10 -DestinationPath "$targetPath/XTBP10.zip"
 #Compress-Archive -Force ./XSQL01 -DestinationPath "$targetPath/XSQL01.zip"
+Compress-Archive -Force ./BPBEX1 -DestinationPath "$targetPath/BPBEX1.zip"
 
 cd $bigFilesPath
 
