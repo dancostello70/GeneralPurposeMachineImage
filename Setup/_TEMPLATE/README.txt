@@ -1,3 +1,3 @@
-XPLK2 Classroom Image
+__CLASSID__ Classroom Image
 Version 1.0
-14 Dec 2019
+__DATE__

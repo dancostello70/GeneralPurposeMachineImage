@@ -1,10 +1,10 @@
 ::@echo off
-:: Uninstall file for XTBP10 (Tableau Prep Introduction)
-:: Version 1.1
-:: Last update: 29 Jan 2020
+:: Uninstall file for ADA100 (Analyzing Data with Power BI)
+:: Version 1.0
+:: Last update: 7 Oct 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
-SET CLASSCODE=XTBP10
+SET CLASSCODE=ADA100
 SET SETUPDIR=%SETUPROOT%\%CLASSCODE%
 SET LOGFILE=%SETUPROOT%\%CLASSCODE%_UninstallLog.log
 SET CLASSDIR=C:\%CLASSCODE%ClassFiles
@@ -16,12 +16,6 @@ time /t >> %LOGFILE%
 
 :: Do uninstalls
 cd %SETUPDIR%\Installers
-
-echo Installing Tableau Prep
-TableauPrep-2020-1-1.exe /uninstall /quiet
-
-echo Installing Tableau Desktop
-TableauDesktop-64bit-2019-4-1.exe /uninstall /quiet
 
 :: Delete stuff
 cd %SETUPROOT%

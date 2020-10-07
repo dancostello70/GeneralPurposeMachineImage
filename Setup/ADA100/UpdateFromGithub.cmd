@@ -1,12 +1,12 @@
 @echo off
-:: Updater for __ClassID__ (__ClassName__)
+:: Updater for ADA100 (Analyzing Data with Power BI)
 :: Version 1.2
-:: Last update: __DATE__
+:: Last update: 7 Oct 2020
 :: Author: Dan Costello (dan@costellotech.com)
 
-SET SETUPDIR=%SETUPROOT%\__ClassID__
+SET SETUPDIR=%SETUPROOT%\ADA100
 SET LOGFILE=%SETUPDIR%\SetupLog.log
-SET CLASSDIR=C:\__ClassID__ClassFiles
+SET CLASSDIR=C:\ADA100ClassFiles
 
 :: Update from GitHub
 echo Updating from GitHub
