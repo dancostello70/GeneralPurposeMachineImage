@@ -42,8 +42,13 @@ cd %SETUPDIR%\Installers
 echo Installing Power BI Desktop
 PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
-
+echo Installing Power BI Report Builder
 msiexec /i PowerBiReportBuilder.en-US.msi /quiet
+
+:: Pin stuff to taskbar
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files (x86)\Power BI Report Builder\PowerBIReportBuilder.exe"
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe"
+
 :: Install databases
 echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
