@@ -42,6 +42,8 @@ cd %SETUPDIR%\Installers
 echo Installing Power BI Desktop
 PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
+
+msiexec /i PowerBiReportBuilder.en-US.msi /quiet
 :: Install databases
 echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
