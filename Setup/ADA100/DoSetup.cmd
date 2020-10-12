@@ -39,8 +39,8 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Do installations
 cd %SETUPDIR%\Installers
 
-echo Installing __Application__
-__ApplicationSpecificInstallerCommandLine__
+echo Installing Power BI Desktop
+PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
 :: Install databases
 echo Setting up SQL Server databases

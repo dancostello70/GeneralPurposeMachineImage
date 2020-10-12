@@ -1,2 +1,2 @@
--- Drop DB Script for __CLASSID__
-DROP DATABASE [Pub1]
+-- Drop DB Script for ADA100
+DROP DATABASE [AdventureWorksDW2020]

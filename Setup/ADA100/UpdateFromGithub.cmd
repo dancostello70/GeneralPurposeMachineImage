@@ -9,5 +9,5 @@ SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\ADA100ClassFiles
 
 :: Update from GitHub
-echo Updating from GitHub
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\UpdateClassfilesFromGithub.ps1
+echo Updating ADA100 from GitHub
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1
