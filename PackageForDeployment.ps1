@@ -16,7 +16,8 @@ cd $setupPath
 #Compress-Archive -Force ./XTBP10 -DestinationPath "$targetPath/XTBP10.zip"
 #Compress-Archive -Force ./XSQL01 -DestinationPath "$targetPath/XSQL01.zip"
 #Compress-Archive -Force ./BPBEX1 -DestinationPath "$targetPath/BPBEX1.zip"
-Compress-Archive -Force ./XRPINP -DestinationPath "$targetPath/XRPINP.zip"
+#Compress-Archive -Force ./XRPINP -DestinationPath "$targetPath/XRPINP.zip"
+Compress-Archive -Force ./ADA100 -DestinationPath "$targetPath/ADA100.zip"
 
 cd $bigFilesPath
 
