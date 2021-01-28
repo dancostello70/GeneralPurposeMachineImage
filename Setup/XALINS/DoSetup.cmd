@@ -1,11 +1,11 @@
 @echo off
-:: Setup file for __ClassID__ (__ClassName__)
+:: Setup file for XALINS (Alteryx Concepts - Level 1)
 :: Version 1.1
 :: Last update: 24 Jan 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
-SET CLASSID=__ClassID__
+SET CLASSID=XALINS
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\%CLASSID%ClassFiles
@@ -40,8 +40,18 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Do installations
 cd %SETUPDIR%\Installers
 
-echo Installing __Application__
+echo Installing Alteryx Designer
 __ApplicationSpecificInstallerCommandLine__
+
+AlteryxTrialInstallx64_2020.4.5.12471.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+
+
+echo Installing Power BI Desktop
+PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
+
+
+echo Installing Tableau Desktop
+TableauDesktop-64bit-2020-3-0.exe /quiet /norestart /log %SETUPDIR%\TableauDesktopSetupLog.log ACCEPTEULA=1
 
 :: Install databases
 echo Setting up SQL Server databases
