@@ -1,7 +1,7 @@
 ::@echo off
 :: Uninstall file for XALINS (Alteryx Concepts - Level 1)
 :: Version 1.0
-:: Last update: __DATE__
+:: Last update: 28 Jan 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 SET CLASSCODE=XALINS

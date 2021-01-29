@@ -7,3 +7,4 @@
 7. Power BI for Excel Users etc. (BPBEX1-BPQM01-WEXF16),BPBEX1
 8. R Programming Introduction (XRPINP),XRPINP
 9. Analyzing Data with Power BI (ADA100),ADA100
+10. Alteryx Concepts - Level 1 (XALINS),XALINS
