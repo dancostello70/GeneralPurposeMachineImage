@@ -21,7 +21,7 @@ cd $setupPath
 Compress-Archive -Force ./XALINS -DestinationPath "$targetPath/XALINS.zip"
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
-c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?sv=2019-12-12&se=2021-02-28T21%3A18%3A44Z&sr=c&sp=rwl&sig=ex7vUkj1BF3Ak%2FyX6WPuYO0wtgP%2FWE4h9hZz1oShB4k%3D" --overwrite=prompt --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?sv=2019-12-12&se=2021-02-28T21%3A18%3A44Z&sr=c&sp=rwl&sig=ex7vUkj1BF3Ak%2FyX6WPuYO0wtgP%2FWE4h9hZz1oShB4k%3D" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 $env:AZCOPY_CRED_TYPE = "";
 
 
