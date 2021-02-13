@@ -40,8 +40,11 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Do installations
 cd %SETUPDIR%\Installers
 
-echo Installing __Application__
-__ApplicationSpecificInstallerCommandLine__
+echo Installing Power BI Desktop
+PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
+
+echo Installing IntelliJ
+ideaIC-2020.3.2.exe  /S /CONFIG=%SETUPDIR%\Installers\silent.config
 
 :: Install databases
 :: echo Setting up SQL Server databases

@@ -1,2 +1,4 @@
 Archive,TargetPath
-__ArchiveFile__.zip,C:\Setup\__ClassDir__\__TargetFolder__
+AzureDataClassFiles.zip,C:\AzureDataClassFiles
+Setup_ANY_Installers_PBIDesktop-2-84.zip,C:\Setup\CS_DP200\Installers
+Setup_ANY_Installers_IntelliJ_2020_3_2.zip,C:\Setup\CS_DP200\Installers
