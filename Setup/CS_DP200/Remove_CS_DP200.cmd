@@ -17,7 +17,18 @@ time /t >> %LOGFILE%
 :: Do uninstalls
 cd %SETUPDIR%\Installers
 
+echo Uninstalling Power BI Desktop
+PBIDesktopSetup_x64.exe -uninstall
+
 :: Delete stuff
+:: Desktop files
+cd %USERPROFILE%\Desktop\
+del "Class Files.lnk"
+del "Course GitHub Site.URL"
+del "Course Handbook.URL"
+
+
+
 cd %SETUPROOT%
 rmdir /s /q %SETUPDIR%
 del %SETUPROOT%\%CLASSCODE%.zip
