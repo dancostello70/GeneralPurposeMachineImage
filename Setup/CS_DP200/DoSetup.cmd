@@ -43,8 +43,14 @@ cd %SETUPDIR%\Installers
 echo Installing Power BI Desktop
 PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
+echo Installing JDK
+jdk-8u281-windows-x64.exe /s
+
 echo Installing IntelliJ
 ideaIC-2020.3.2.exe  /S /CONFIG=%SETUPDIR%\Installers\silent.config
+
+echo Installing Scala
+msiexec /i scala-2.13.4.msi /quiet /norestart ACCEPT_EULA=1 /log scalalog.log
 
 :: Install databases
 :: echo Setting up SQL Server databases

@@ -18,7 +18,7 @@ time /t >> %LOGFILE%
 cd %SETUPDIR%\Installers
 
 echo Uninstalling Power BI Desktop
-PBIDesktopSetup_x64.exe -uninstall
+PBIDesktopSetup_x64.exe -uninstall -q
 
 :: Delete stuff
 :: Desktop files
