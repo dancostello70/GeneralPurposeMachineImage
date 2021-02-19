@@ -52,6 +52,9 @@ ideaIC-2020.3.2.exe  /S /CONFIG=%SETUPDIR%\Installers\silent.config
 echo Installing Scala
 msiexec /i scala-2.13.4.msi /quiet /norestart ACCEPT_EULA=1 /log scalalog.log
 
+echo Installing Python 3.9.1
+python-3.9.1-amd64.exe /quiet InstallAllUsers=1 PrependPath=1
+
 :: Install databases
 :: echo Setting up SQL Server databases
 :: call %SETUPDIR%\Scripts\SetupDbs.cmd
