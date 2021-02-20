@@ -59,6 +59,10 @@ python-3.9.1-amd64.exe /quiet InstallAllUsers=1 PrependPath=1
 :: echo Setting up SQL Server databases
 :: call %SETUPDIR%\Scripts\SetupDbs.cmd
 
+:: Remove Edge from the Taskbar
+echo Removing Edge from the Taskbar
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\RemoveEdgeFromTaskbar.ps1
+
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
 
