@@ -1,7 +1,7 @@
 @echo off
 :: Setup file for ADA100 (Analyzing Data with Power BI)
-:: Version 1.0
-:: Last update: 27 Feb 2020
+:: Version 2.0
+:: Last update: 4 Mar 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 SET CLASSID=ADA100
@@ -29,8 +29,8 @@ echo Extracting archives
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\ExtractArchives.ps1 -ClassId %CLASSID%
 
 :: Update from GitHub
-echo Updating from GitHub
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1 -ClassId %CLASSID%
+:: echo Updating from GitHub
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1 -ClassId %CLASSID%
 
 :: Copy Desktop Files
 echo Copying desktop files
