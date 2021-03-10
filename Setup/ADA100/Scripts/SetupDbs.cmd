@@ -13,6 +13,7 @@ NET START SQLSERVERAGENT
 REM - Run SQL Script to prepare the database environment
 ECHO Preparing Databases...
 SQLCMD -E -i %SUBDIR%\RestoreAWDW2020.sql
+SQLCMD -E -i %SUBDIR%\RestoreTailspinToys2020.sql
 
 ::pause
 
