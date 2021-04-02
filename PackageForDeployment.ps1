@@ -3,6 +3,7 @@ $bigFilesPath = "$PSScriptRoot\BigFiles"
 $zipArchivePath = "$PSScriptRoot\ZipArchives"
 $targetPath = "$PSScriptRoot\DeploymentPackages"
 $imageComponentsPath = "$PSScriptRoot\ImageComponents\XSPLK2\ArchiveSource"
+$AzCopyParams="sv=2020-04-08&se=2021-05-02T18%3A46%3A45Z&sr=c&sp=rwl&sig=KKt7pyIok1a5Vk1UaUJkAAURQMLTz1Tdg8xCIfbyCss%3D" 
 
 
 cd $setupPath
@@ -33,7 +34,7 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 #c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\ADA100.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/ADA100.zip?sv=2019-12-12&se=2021-04-03T20%3A15%3A49Z&sr=c&sp=rwl&sig=c7wbSYZO6sFefBKWZ40Q0nDOeb7%2FJr58nSZ4nnDwmgQ%3D" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # BDXM01
-c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?sv=2019-12-12&se=2021-04-03T20%3A15%3A49Z&sr=c&sp=rwl&sig=c7wbSYZO6sFefBKWZ40Q0nDOeb7%2FJr58nSZ4nnDwmgQ%3D" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 
 $env:AZCOPY_CRED_TYPE = "";
