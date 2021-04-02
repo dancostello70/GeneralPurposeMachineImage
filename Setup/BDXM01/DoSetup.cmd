@@ -29,10 +29,6 @@ time /t >> %LOGFILE%
 echo Extracting archives
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\ExtractArchives.ps1 -ClassId %CLASSID%
 
-:: Update from GitHub
-echo Updating from GitHub
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\UpdateClassfilesFromGithub.ps1 -ClassId %CLASSID%
-
 :: Copy Desktop Files
 echo Copying desktop files
 xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
@@ -40,8 +36,8 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Do installations
 cd %SETUPDIR%\Installers
 
-echo Installing __Application__
-__ApplicationSpecificInstallerCommandLine__
+echo Installing Power BI Desktop
+PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
 :: Install databases
 echo Setting up SQL Server databases
