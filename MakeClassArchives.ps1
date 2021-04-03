@@ -14,6 +14,15 @@ if($true){
 
 $classId = "BDXM01"
 
+
+    Compress-Archive -Force D:\Data\* -DestinationPath D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives\BDXM01_Data.zip
+    # Upload
+    C:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives\BDXM01_Data.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01_Data.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+
+    Compress-Archive -Force D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ImageComponents\BDXM01_PBI\* -DestinationPath D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives\BDXM01_PBI.zip
+    # Upload
+    C:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives\BDXM01_PBI.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01_PBI.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+
     Compress-Archive -Force D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ImageComponents\BDXM01LabMaterials\* -DestinationPath D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives\BDXM01LabMaterials.zip
     # Upload
     C:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives\BDXM01LabMaterials.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
