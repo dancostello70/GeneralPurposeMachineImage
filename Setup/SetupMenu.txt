@@ -8,4 +8,5 @@
 8. R Programming Introduction (XRPINP),XRPINP
 9. Analyzing Data with Power BI (ADA100),ADA100
 10. Alteryx Concepts - Level 1 (XALINS),XALINS
-11. *** CUSTOM *** Azure Data Fundamentals for CareSource (CS_DP200),CS_DP200
+11. DAX Formulas for Dynamic Tables (BDXM01),BDXM01
+12. *** CUSTOM *** Azure Data Fundamentals for CareSource (CS_DP200),CS_DP200
