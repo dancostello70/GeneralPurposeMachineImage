@@ -19,9 +19,9 @@ cd $setupPath
 #Compress-Archive -Force ./BPBEX1 -DestinationPath "$targetPath/BPBEX1.zip"
 #Compress-Archive -Force ./XRPINP -DestinationPath "$targetPath/XRPINP.zip"
 #Compress-Archive -Force ./ADA100 -DestinationPath "$targetPath/ADA100.zip"
-#Compress-Archive -Force ./XALINS -DestinationPath "$targetPath/XALINS.zip"
+Compress-Archive -Force ./XALINS -DestinationPath "$targetPath/XALINS.zip"
 #Compress-Archive -Force ./CS_DP200 -DestinationPath "$targetPath/CS_DP200.zip"
-Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
+#Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 
@@ -34,7 +34,10 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 #c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\ADA100.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/ADA100.zip?sv=2019-12-12&se=2021-04-03T20%3A15%3A49Z&sr=c&sp=rwl&sig=c7wbSYZO6sFefBKWZ40Q0nDOeb7%2FJr58nSZ4nnDwmgQ%3D" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # BDXM01
-c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+#c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+
+# XALINS
+c:/Utility/azcopy.exe copy "$targetPath\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 
 $env:AZCOPY_CRED_TYPE = "";

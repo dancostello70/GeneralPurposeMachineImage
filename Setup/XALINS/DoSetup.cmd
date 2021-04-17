@@ -1,7 +1,8 @@
 @echo off
 :: Setup file for XALINS (Alteryx Concepts - Level 1)
-:: Version 1.2
-:: Last update: 28 Jan 2021
+:: EDITED TO ADD: *and* XAL2NS (Alteryx Level 2)
+:: Version 2.0
+:: Last update: 16 April 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
@@ -50,8 +51,8 @@ echo Installing Alteryx Designer
 AlteryxTrialInstallx64_2020.4.5.12471.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
 
 :: Install databases
-:: echo Setting up SQL Server databases
-:: call %SETUPDIR%\Scripts\SetupDbs.cmd
+echo Setting up SQL Server databases
+call %SETUPDIR%\Scripts\SetupDbs.cmd
 
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
