@@ -3,7 +3,7 @@ $sourcePath = "$PSScriptRoot\ImageComponents"
 $AzCopyParams="sv=2020-04-08&se=2021-05-02T18%3A46%3A45Z&sr=c&sp=rwl&sig=KKt7pyIok1a5Vk1UaUJkAAURQMLTz1Tdg8xCIfbyCss%3D" 
 $env:AZCOPY_CRED_TYPE = "";
 
-
+$defaultZipArchiveLocation = "C:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives"
 
 cd $sourcePath
 
@@ -11,6 +11,19 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 
 
 if($true){
+
+$classId = "XAL2NS"
+$archiveName = "XAL2NSClassFiles"
+
+    Compress-Archive -Force "C:\Users\dan\Costello Technical Consulting\Courseware - Public\Coursefiles\XAL2NS\XAL2NSClassFiles\*" -DestinationPath "$defaultZipArchiveLocation\$archiveName.zip"
+    
+    # Upload
+    C:/Utility/azcopy.exe copy "$defaultZipArchiveLocation\$archiveName.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$archiveName.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+
+    
+}
+
+if($false){
 
 $classId = "BDXM01"
 
