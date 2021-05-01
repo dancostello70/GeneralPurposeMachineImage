@@ -13,7 +13,7 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 if($true){
 
 $classId = "XAL2NS"
-$archiveName = "XAL2NSClassFiles"
+$archiveName = "C_XAL2NSClassFiles"
 
     Compress-Archive -Force "C:\Users\dan\Costello Technical Consulting\Courseware - Public\Coursefiles\XAL2NS\XAL2NSClassFiles\*" -DestinationPath "$defaultZipArchiveLocation\$archiveName.zip"
     
