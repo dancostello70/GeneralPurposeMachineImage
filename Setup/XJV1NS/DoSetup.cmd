@@ -1,11 +1,11 @@
 @echo off
-:: Setup file for __ClassID__ (__ClassName__)
+:: Setup file for XJV1NS (Java Programming Level 1/2)
 :: Version 1.1
-:: Last update: 24 Jan 2021
+:: Last update: 11 Jul 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
-SET CLASSID=__ClassID__
+SET CLASSID=XJV1NS
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\%CLASSID%ClassFiles
@@ -40,8 +40,15 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Do installations
 cd %SETUPDIR%\Installers
 
-echo Installing __Application__
-__ApplicationSpecificInstallerCommandLine__
+
+echo Installing JRE
+jre-8u291-windows-x64.exe /s
+
+echo Installing JDK
+jdk-8u281-windows-x64.exe /s
+
+echo Installing IntelliJ
+ideaIC-2020.3.2.exe  /S /CONFIG=%SETUPDIR%\Installers\silent.config
 
 :: Install databases
 :: echo Setting up SQL Server databases

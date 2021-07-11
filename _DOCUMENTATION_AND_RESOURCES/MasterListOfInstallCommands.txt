@@ -4,6 +4,9 @@ cd %SETUPDIR%\Installers
 echo Installing Power BI Desktop
 PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 
+echo Installing JRE
+jre-8u291-windows-x64.exe /s
+
 echo Installing JDK
 jdk-8u281-windows-x64.exe /s
 

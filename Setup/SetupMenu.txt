@@ -9,4 +9,5 @@
 9. Analyzing Data with Power BI (ADA100),ADA100
 10. Alteryx Level 1/Level 2 (XALINS-XAL2NS),XALINS
 11. DAX Formulas for Dynamic Tables (BDXM01),BDXM01
-12. *** CUSTOM *** Azure Data Fundamentals for CareSource (CS_DP200),CS_DP200
+12. Java Programming Level 1/Level 2 (XJV1NS-XJV2NS),XJV1NS
+13. *** CUSTOM *** Azure Data Fundamentals for CareSource (CS_DP200),CS_DP200
