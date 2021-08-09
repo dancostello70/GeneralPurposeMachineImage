@@ -1,8 +1,9 @@
 @echo off
 :: Setup file for ADA100 (Analyzing Data with Power BI)
-:: Version 2.0
-:: Last update: 4 Mar 2021
+:: Version 3.0
+:: Last update: 9 Aug 2021
 :: Author: Dan Costello (dan@costellotech.com)
+:: Version notes: Added new Aug 2021 version of lab files from GitHub, updated execution policy
 
 SET CLASSID=ADA100
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
@@ -52,6 +53,9 @@ powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Ta
 :: Install databases
 echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
+
+:: Change the Execution Policy
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
 
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%

@@ -1,7 +1,8 @@
 ﻿$setupPath = "$PSScriptRoot\Setup"
 $sourcePath = "$PSScriptRoot\ImageComponents"
-$AzCopyParams="sv=2020-04-08&se=2021-05-02T18%3A46%3A45Z&sr=c&sp=rwl&sig=KKt7pyIok1a5Vk1UaUJkAAURQMLTz1Tdg8xCIfbyCss%3D" 
+$AzCopyParams="sv=2020-04-08&se=2021-09-08T19%3A21%3A14Z&sr=c&sp=rwl&sig=cRKbGo9EFU8znUv3wBv9M3vnr5Zc0s%2FqcfeEAKG4aNY%3D" 
 $env:AZCOPY_CRED_TYPE = "";
+
 
 $defaultZipArchiveLocation = "C:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\ZipArchives"
 
@@ -10,7 +11,7 @@ cd $sourcePath
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 
 
-if($true){
+if($false){
 
 $classId = "XAL2NS"
 $archiveName = "C_XAL2NSClassFiles"
