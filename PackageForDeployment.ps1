@@ -3,7 +3,8 @@ $bigFilesPath = "$PSScriptRoot\BigFiles"
 $zipArchivePath = "$PSScriptRoot\ZipArchives"
 $targetPath = "$PSScriptRoot\DeploymentPackages"
 $imageComponentsPath = "$PSScriptRoot\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2020-04-08&se=2021-05-20T12%3A54%3A18Z&sr=c&sp=rwl&sig=ql19mKQKtBV8wEx9QYgaTXthYIo1udkCs7GT2muh1SY%3D" 
+$AzCopyParams="sv=2020-04-08&se=2021-09-08T19%3A21%3A14Z&sr=c&sp=rwl&sig=cRKbGo9EFU8znUv3wBv9M3vnr5Zc0s%2FqcfeEAKG4aNY%3D" 
+
 
 
 cd $setupPath
@@ -18,10 +19,10 @@ cd $setupPath
 #Compress-Archive -Force ./XSQL01 -DestinationPath "$targetPath/XSQL01.zip"
 #Compress-Archive -Force ./BPBEX1 -DestinationPath "$targetPath/BPBEX1.zip"
 #Compress-Archive -Force ./XRPINP -DestinationPath "$targetPath/XRPINP.zip"
-#Compress-Archive -Force ./ADA100 -DestinationPath "$targetPath/ADA100.zip"
+Compress-Archive -Force ./ADA100 -DestinationPath "$targetPath/ADA100.zip"
 #Compress-Archive -Force ./XALINS -DestinationPath "$targetPath/XALINS.zip"
 #Compress-Archive -Force ./CS_DP200 -DestinationPath "$targetPath/CS_DP200.zip"
-Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
+#Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 
@@ -31,10 +32,10 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 # c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\CS_DP200.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/CS_DP200.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # ADA100
-#c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\ADA100.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/ADA100.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+c:/Utility/azcopy.exe copy "$targetPath\ADA100.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/ADA100.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # BDXM01
-c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+#c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # XALINS
 #c:/Utility/azcopy.exe copy "$targetPath\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
@@ -44,7 +45,7 @@ $env:AZCOPY_CRED_TYPE = "";
 
 
 
-cd $bigFilesPath
+#cd $bigFilesPath
 
 # Support archives
 #Compress-Archive -Force ./Setup_XSPLK2_Installers/* -DestinationPath "$zipArchivePath/Setup_XSPLK2_Installers.zip"
@@ -56,4 +57,4 @@ cd $bigFilesPath
 #Compress-Archive -Force ./Setup_ANY_Installers_TableauServer/* -DestinationPath "$zipArchivePath/Setup_ANY_Installers_TableauServer.zip"
 
 
-cd $setupPath
+#cd $setupPath
