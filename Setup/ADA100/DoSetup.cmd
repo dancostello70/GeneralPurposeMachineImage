@@ -20,7 +20,8 @@ echo Beginning setup of %CLASSID%
 :: Download files
 echo Downloading files
 :: echo (Please be patient -- the files for this class are quite large)
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadFiles.ps1 -ClassId %CLASSID%
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadFiles.ps1 -ClassId %CLASSID%
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadFilesWithCheck.ps1 -ClassId %CLASSID%
 
 echo Downloads complete >> %LOGFILE%
 time /t >> %LOGFILE%

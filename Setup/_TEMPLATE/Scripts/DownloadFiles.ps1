@@ -1,4 +1,4 @@
-﻿# Download files for CS_DP200 (CareSource Introduction to Azure Data Technologies)
+﻿# Download files for __ClassID__ (__ClassName__)
 param($ClassId)
 
 $selectedClassId = $ClassId

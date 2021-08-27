@@ -1,4 +1,4 @@
-﻿# Download files for __ClassID__ (__ClassName__)
+﻿# Download files for ADA100 (Analyzing Data with Power BI)
 param($ClassId)
 
 $selectedClassId = $ClassId
