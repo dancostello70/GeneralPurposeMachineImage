@@ -19,10 +19,11 @@ cd $setupPath
 #Compress-Archive -Force ./XSQL01 -DestinationPath "$targetPath/XSQL01.zip"
 #Compress-Archive -Force ./BPBEX1 -DestinationPath "$targetPath/BPBEX1.zip"
 #Compress-Archive -Force ./XRPINP -DestinationPath "$targetPath/XRPINP.zip"
-Compress-Archive -Force ./ADA100 -DestinationPath "$targetPath/ADA100.zip"
+#Compress-Archive -Force ./ADA100 -DestinationPath "$targetPath/ADA100.zip"
 #Compress-Archive -Force ./XALINS -DestinationPath "$targetPath/XALINS.zip"
 #Compress-Archive -Force ./CS_DP200 -DestinationPath "$targetPath/CS_DP200.zip"
 #Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
+Compress-Archive -Force ./BDXM01n -DestinationPath "$targetPath/BDXM01n.zip"
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 

@@ -1,0 +1,21 @@
+[
+    {
+        "title" : "Test 1" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-96.zip" ,
+        "localTarget" : "c:\\setup\\zipfiles" ,
+        "extractTarget" : "c:\\coursefiles\\DAXIntro" ,
+        "installCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1"
+    } ,
+    {
+        "title" : "Test 2" ,
+        "downloadURL" : "" ,
+        "localTarget" : "c:\\setup\\zipfiles" ,
+        "extractTarget" : "c:\\coursefiles\\DAXIntro"
+    } ,
+    {
+        "title" : "Test 3" ,
+        "downloadURL" : "" ,
+        "localTarget" : "c:\\setup\\zipfiles" ,
+        "extractTarget" : "c:\\coursefiles\\DAXIntro"
+    } 
+]
