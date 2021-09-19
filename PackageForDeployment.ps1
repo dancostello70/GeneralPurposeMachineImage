@@ -3,7 +3,7 @@ $bigFilesPath = "$PSScriptRoot\BigFiles"
 $zipArchivePath = "$PSScriptRoot\ZipArchives"
 $targetPath = "$PSScriptRoot\DeploymentPackages"
 $imageComponentsPath = "$PSScriptRoot\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2020-04-08&se=2021-09-08T19%3A21%3A14Z&sr=c&sp=rwl&sig=cRKbGo9EFU8znUv3wBv9M3vnr5Zc0s%2FqcfeEAKG4aNY%3D" 
+$AzCopyParams="sv=2020-04-08&se=2021-10-18T21%3A45%3A48Z&sr=c&sp=rwl&sig=YRIQxaDjBbjyFf%2FDIIVmhNAVtDHt%2BaLN3QMmFGoGhpw%3D" 
 
 
 
@@ -33,13 +33,16 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 # c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\CS_DP200.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/CS_DP200.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # ADA100
-c:/Utility/azcopy.exe copy "$targetPath\ADA100.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/ADA100.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+#c:/Utility/azcopy.exe copy "$targetPath\ADA100.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/ADA100.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # BDXM01
 #c:/Utility/azcopy.exe copy "$targetPath\BDXM01.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # XALINS
 #c:/Utility/azcopy.exe copy "$targetPath\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+
+# BDXM01n
+c:/Utility/azcopy.exe copy "$targetPath\BDXM01n.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01n.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 
 $env:AZCOPY_CRED_TYPE = "";

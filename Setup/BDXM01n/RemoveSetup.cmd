@@ -8,7 +8,7 @@ IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
 SET CLASSID=BDXM01n
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\%CLASSID%_UninstallLog.log
-SET CLASSDIR=C:\CourseFiles\DAXIntro
+SET CLASSDIR=C:\Coursefiles\DAXIntro
 
 :: Start log
 echo Beginning uninstall > %LOGFILE%
@@ -26,6 +26,7 @@ del %SETUPROOT%\%CLASSID%.zip
 
 del "%USERPROFILE%\Desktop\DAX Intro Files.lnk"
 
+del /f /s /q %CLASSDIR%\*.*
 rmdir /s /q %CLASSDIR%
 
 
