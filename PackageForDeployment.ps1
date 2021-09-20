@@ -25,6 +25,9 @@ cd $setupPath
 #Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
 Compress-Archive -Force ./BDXM01n -DestinationPath "$targetPath/BDXM01n.zip"
 
+# Lab files
+Compress-Archive -Force "c:\CourseFiles\DAXIntro" -DestinationPath "$targetPath/C_Coursefiles_DAXIntro.zip"
+
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 
 # c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
@@ -43,6 +46,7 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 
 # BDXM01n
 c:/Utility/azcopy.exe copy "$targetPath\BDXM01n.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BDXM01n.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+c:/Utility/azcopy.exe copy "$targetPath\C_Coursefiles_DAXIntro.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/C_Coursefiles_DAXIntro.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 
 $env:AZCOPY_CRED_TYPE = "";
