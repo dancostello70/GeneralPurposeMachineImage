@@ -1,0 +1,27 @@
+[
+    {
+        "title" : "BPBEX1 Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_StudentFiles.zip" ,
+        "extractTarget" : "C:\\Users\\Student\\Desktop\\BPBEX1" ,
+        "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPBEX1"
+    } ,
+    {
+        "title" : "WEXF16 Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/WEXF16_StudentFiles.zip" ,
+        "extractTarget" : "C:\\Users\\Student\\Desktop\\WEXF16" ,
+        "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\WEXF16"
+    } ,
+    {
+        "title" : "BPQM01 Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPQM01_StudentFiles.zip" ,
+        "extractTarget" : "C:\\Users\\Student\\Desktop\\BPQM01" ,
+        "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPQM01"
+    } ,
+    {
+        "title" : "Power BI Desktop (Version 2-97)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-97.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    }
+]

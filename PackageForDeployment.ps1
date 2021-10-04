@@ -24,6 +24,7 @@ Compress-Archive -Force ./BPBEX1 -DestinationPath "$targetPath/BPBEX1.zip"
 #Compress-Archive -Force ./CS_DP200 -DestinationPath "$targetPath/CS_DP200.zip"
 #Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
 #Compress-Archive -Force ./BDXM01n -DestinationPath "$targetPath/BDXM01n.zip"
+Compress-Archive -Force ./BPBEX1_new -DestinationPath "$targetPath/BPBEX1_new.zip"
 
 # Lab files
 #Compress-Archive -Force "c:\CourseFiles\DAXIntro" -DestinationPath "$targetPath/C_Coursefiles_DAXIntro.zip"
@@ -49,7 +50,10 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 #c:/Utility/azcopy.exe copy "$targetPath\C_Coursefiles_DAXIntro.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/C_Coursefiles_DAXIntro.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # BPBEX1
-c:/Utility/azcopy.exe copy "$targetPath/BPBEX1.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+#c:/Utility/azcopy.exe copy "$targetPath/BPBEX1.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+
+# BPBEX1_new
+c:/Utility/azcopy.exe copy "$targetPath/BPBEX1_new.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_new.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 
 $env:AZCOPY_CRED_TYPE = "";

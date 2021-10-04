@@ -1,11 +1,11 @@
 @echo off
-:: Setup file for __ClassID__ (__ClassName__)
+:: Setup file for BPBEX1 (Power BI for Excel Users)
 :: Version 1.0
-:: Last update: _____________
+:: Last update: 2 Oct 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
-SET CLASSID=__ClassID__
+SET CLASSID=BPBEX1_new
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\%CLASSID%ClassFiles
