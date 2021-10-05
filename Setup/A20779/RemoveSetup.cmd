@@ -1,11 +1,11 @@
 ::@echo off
-:: Uninstall file for __ClassID__ (__ClassName__)
+:: Uninstall file for A20779 (Analyzing Data with Excel)
 :: Version 1.0
 :: Last update: __________
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
-SET CLASSID=__ClassID__
+SET CLASSID=A20779
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\%CLASSID%_UninstallLog.log
 SET CLASSDIR=C:\Coursefiles\DAXIntro
