@@ -1,7 +1,7 @@
 @echo off
 :: Setup file for A20779 (Analyzing Data with Excel)
 :: Version 1.0
-:: Last update: _____________
+:: Last update: 5 Oct 2021
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
