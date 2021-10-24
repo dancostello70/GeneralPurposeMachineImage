@@ -1,14 +1,32 @@
-$setupPath = "$PSScriptRoot\Setup"
-$bigFilesPath = "$PSScriptRoot\BigFiles"
-$zipArchivePath = "$PSScriptRoot\ZipArchives"
-$targetPath = "$PSScriptRoot\DeploymentPackages"
-$imageComponentsPath = "$PSScriptRoot\ImageComponents\XSPLK2\ArchiveSource"
+$rootDir = (Get-Item $PSScriptRoot).Parent.FullName
+
+$setupPath = "$rootDir\Setup"
+$bigFilesPath = "$rootDir\BigFiles"
+$zipArchivePath = "$rootDir\ZipArchives"
+$targetPath = "$rootDir\DeploymentPackages"
+$imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
 $AzCopyParams="sv=2020-04-08&se=2021-10-18T21%3A45%3A48Z&sr=c&sp=rwl&sig=YRIQxaDjBbjyFf%2FDIIVmhNAVtDHt%2BaLN3QMmFGoGhpw%3D" 
 
+$classesToDeploy = (
+    # "BPBEX1",
+    # "A20779",
+    # "BPBEX1_new"
+    "___END___"
+)
 
+$env:AZCOPY_CRED_TYPE = "Anonymous";
+Set-Location $setupPath
 
-cd $setupPath
+foreach ($item in $classesToDeploy) {
+    if ($item -ne "___END___") {
+        Write-Host "Compresing $item"
+        Compress-Archive -Force ./$item -DestinationPath "$targetPath/$item.zip"
+        Write-Host "Uploading $item"
+        c:/Utility/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;    
+    }    
+}
 
+$env:AZCOPY_CRED_TYPE = "";
 # Master files
 
 #Compress-Archive -Force ./20778C -DestinationPath "$targetPath/20778C.zip"
@@ -25,7 +43,7 @@ cd $setupPath
 #Compress-Archive -Force ./BDXM01 -DestinationPath "$targetPath/BDXM01.zip"
 #Compress-Archive -Force ./BDXM01n -DestinationPath "$targetPath/BDXM01n.zip"
 #Compress-Archive -Force ./BPBEX1_new -DestinationPath "$targetPath/BPBEX1_new.zip"
-Compress-Archive -Force ./A20779 -DestinationPath "$targetPath/A20779.zip"#
+#Compress-Archive -Force ./A20779 -DestinationPath "$targetPath/A20779.zip"#
 
 # Lab files
 #Compress-Archive -Force "c:\CourseFiles\DAXIntro" -DestinationPath "$targetPath/C_Coursefiles_DAXIntro.zip"
@@ -57,14 +75,14 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 #c:/Utility/azcopy.exe copy "$targetPath/BPBEX1_new.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_new.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # A20779
-c:/Utility/azcopy.exe copy "$targetPath/A20779.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/A20779.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+#c:/Utility/azcopy.exe copy "$targetPath/A20779.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/A20779.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 
 $env:AZCOPY_CRED_TYPE = "";
 
 
 
-#cd $bigFilesPath
+Set-Location $bigFilesPath
 
 # Support archives
 #Compress-Archive -Force ./Setup_XSPLK2_Installers/* -DestinationPath "$zipArchivePath/Setup_XSPLK2_Installers.zip"
@@ -76,4 +94,4 @@ $env:AZCOPY_CRED_TYPE = "";
 #Compress-Archive -Force ./Setup_ANY_Installers_TableauServer/* -DestinationPath "$zipArchivePath/Setup_ANY_Installers_TableauServer.zip"
 
 
-#cd $setupPath
+Set-Location $setupPath
