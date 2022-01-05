@@ -5,12 +5,14 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2020-04-08&se=2021-10-18T21%3A45%3A48Z&sr=c&sp=rwl&sig=YRIQxaDjBbjyFf%2FDIIVmhNAVtDHt%2BaLN3QMmFGoGhpw%3D" 
+$AzCopyParams="sv=2020-08-04&se=2022-01-09T22%3A21%3A54Z&sr=c&sp=rwl&sig=mQh4RNXg2IEDJrEKHc91YuuqKX7zdaMjwXmy7YQRKi4%3D" 
+
 
 $classesToDeploy = (
     # "BPBEX1",
     # "A20779",
     # "BPBEX1_new"
+    "BPBINT",
     "___END___"
 )
 
@@ -82,7 +84,7 @@ $env:AZCOPY_CRED_TYPE = "";
 
 
 
-Set-Location $bigFilesPath
+# Set-Location $bigFilesPath
 
 # Support archives
 #Compress-Archive -Force ./Setup_XSPLK2_Installers/* -DestinationPath "$zipArchivePath/Setup_XSPLK2_Installers.zip"
