@@ -1,17 +1,17 @@
 [
     {
-        "title" : "Power BI Intermediate Coursefiles" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINT_Demo.zip" ,
+        "title" : "Power BI Intermediate Demo Files" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTDemoFiles.zip" ,
         "extractTarget" : "C:\\Users\\Student\\Desktop"
     } ,
     {
-        "title" : "Power BI Intermediate Labfiled" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINT_Labs.zip" ,
+        "title" : "Power BI Intermediate Labfiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTLabfiles.zip" ,
         "extractTarget" : "C:\\Users\\Student\\Desktop"
     } ,
     {
         "title" : "Power BI Intermediate Solutions" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINT_LabSolutions.zip" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTLabSolutions.zip" ,
         "extractTarget" : "C:\\Users\\Student\\Desktop"
     } ,
     {
