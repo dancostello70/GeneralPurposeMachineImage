@@ -1,7 +1,7 @@
 ::@echo off
 :: Uninstall file for APL300 (PL-300: Microsoft Power BI Data Analyst)
 :: Version 1.0
-:: Last update: __________
+:: Last update: 2022-03-08
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
@@ -24,7 +24,7 @@ cd %SETUPROOT%
 rmdir /s /q %SETUPDIR%
 del %SETUPROOT%\%CLASSID%.zip
 
-del "%USERPROFILE%\Desktop\DAX Intro Files.lnk"
+del "%USERPROFILE%\Desktop\*.lnk"
 
 del /f /s /q %CLASSDIR%\*.*
 rmdir /s /q %CLASSDIR%
