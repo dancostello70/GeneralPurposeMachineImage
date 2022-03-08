@@ -10,7 +10,7 @@ $AzCopyParams="sv=2020-10-02&se=2022-04-07T17%3A35%3A45Z&sr=c&sp=rwl&sig=o%2BHJF
 $classesToDeploy = (
     # "BPBEX1",
     # "A20779",
-    # "BPBEX1_new"
+    # "BPBEX1_new",
     # "BPBINT",
     "APL300",
     "___END___"
