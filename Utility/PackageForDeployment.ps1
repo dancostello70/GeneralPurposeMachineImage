@@ -24,7 +24,7 @@ foreach ($item in $classesToDeploy) {
         Write-Host "Compresing $item"
         Compress-Archive -Force ./$item -DestinationPath "$targetPath/$item.zip"
         Write-Host "Uploading $item"
-        c:/Utility/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;    
+        c:/Utilities/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;    
     }    
 }
 
