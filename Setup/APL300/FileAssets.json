@@ -15,7 +15,7 @@
         "title" : "Power BI Report Builder (Version 15.7)" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PowerBiReportBuilder_v15_7.zip" ,
         "relativeExtractTarget" : "Installers" ,
-        "relativeInstallCommand" : "msiexec /i PowerBiReportBuilder.en-US.msi /quiet" ,
-        "relativeUninstallCommand" : "msiexec /x PowerBiReportBuilder.en-US.msi /quiet"
+        "installCommand" : "msiexec /i c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet" ,
+        "uninstallCommand" : "msiexec /x c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet"
     }
 ]

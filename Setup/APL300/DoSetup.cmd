@@ -23,6 +23,10 @@ powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadExtractInsta
 echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
 
+:: Install databases
+echo Setting up SQL Server databases
+call %SETUPDIR%\Scripts\SetupDbs.cmd
+
 :: Copy Desktop Files
 echo Copying desktop files
 xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
@@ -30,6 +34,9 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 :: Pin stuff to taskbar
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files (x86)\Power BI Report Builder\PowerBIReportBuilder.exe"
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe"
+
+:: Change the Execution Policy
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
 
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
