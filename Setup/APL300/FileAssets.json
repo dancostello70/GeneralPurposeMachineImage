@@ -3,10 +3,15 @@
         "title" : "PL-300 Coursefiles" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/D_PL300_Mar2022.zip" ,
         "extractTarget" : "d:\\PL300"
+    } ,    
+    {
+        "title" : "DA-100 Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/D_DA100_Aug2021.zip" ,
+        "extractTarget" : "d:\\DA100"
     } ,
     {
-        "title" : "Power BI Desktop (Version 2-102)" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-102.zip" ,
+        "title" : "Power BI Desktop (Version 2-100)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-100.zip" ,
         "relativeExtractTarget" : "Installers" ,
         "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
         "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
