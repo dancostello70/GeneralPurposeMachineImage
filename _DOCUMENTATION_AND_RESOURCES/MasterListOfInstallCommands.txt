@@ -30,3 +30,6 @@ AlteryxTrialInstallx64_2020.4.5.12471.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
 
 echo Installing DAX Studio
 DaxStudio_2_16_2_setup.exe /VERYSILENT /CURRENTUSER
+
+echo Installing git (must be run from PowerShell)
+winget install --id Git.git --silent --accept-source-agreements
