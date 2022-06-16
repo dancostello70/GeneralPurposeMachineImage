@@ -33,3 +33,9 @@ DaxStudio_2_16_2_setup.exe /VERYSILENT /CURRENTUSER
 
 echo Installing git (must be run from PowerShell)
 winget install --id Git.git --silent --accept-source-agreements
+
+echo Installing Splunk Enterprise
+msiexec.exe /I splunk-8.0.1-6db836e2fb9e-x64-release.msi SPLUNKUSERNAME=admin SPLUNKPASSWORD=password AGREETOLICENSE=Yes INSTALLDIR="C:\Splunk" /quiet
+
+echo Installing Java JRE
+jre-8u231-windows-x64.exe /s
