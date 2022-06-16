@@ -16,6 +16,11 @@ echo Beginning setup > %LOGFILE%
 date /t >> %LOGFILE%
 time /t >> %LOGFILE%
 
+:: Dummy run of winget
+winget
+
+powershell -ExecutionPolicy Bypass -Command "Start-Sleep 5"
+
 :: Install git
 winget install --id Git.Git -e --silent --accept-source-agreements --source winget
 
