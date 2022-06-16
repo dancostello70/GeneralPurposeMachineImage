@@ -1,0 +1,29 @@
+[
+    {
+        "title" : "Splunk 2 Class Files (large)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/c_XSPLK2ClassFiles_BIG.zip" ,
+        "extractTarget" : "c:\\XSPLK2ClassFiles"
+    } ,
+    {
+        "title" : "Splunk Installer (Version 8.0.1)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_splunk-8-0-1.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "installCommand" : "msiexec.exe /I c:\\Setup\\XSPLK2\\Installers\\splunk-8.0.1-6db836e2fb9e-x64-release.msi SPLUNKUSERNAME=admin SPLUNKPASSWORD=password AGREETOLICENSE=Yes INSTALLDIR=C:\\Splunk /quiet" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    } ,
+    {
+        "title" : "JDK (Version 8u231)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_jdk-8u231-windows-x64.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "jdk-8u231-windows-x64.exe /s"
+    }
+]
+
+c_XSPLK2ClassFiles_BIG.zip,https://onlcsetup.blob.core.windows.net/setupfiles/c_XSPLK2ClassFiles_BIG.zip
+Setup_XSPLK2_Installers.zip,https://onlcsetup.blob.core.windows.net/setupfiles/Setup_XSPLK2_Installers.zip
+
+
+c_XSPLK2ClassFiles_BIG.zip,C:\XSPLK2ClassFiles
+Setup_XSPLK2_Installers.zip,C:\Setup\XSPLK2\Installers
+C_Improving-your-Splunk-skills-master.zip,C:\Improving-your-Splunk-skills-master
+curl-7.68.0-win64-mingw.zip,"C:\Program Files\curl-7.68.0-win64-mingw"
