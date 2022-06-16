@@ -21,8 +21,13 @@ winget install --id Git.Git -e --silent --accept-source-agreements --source wing
 
 echo Beginning setup of %CLASSID%
 
-:: Clone from GitHub
+:: Clone class files from GitHub
 "%ProgramFiles%\Git\bin\git.exe" clone https://github.com/ONLC-ClassMaterials/XSPLK2ClassFiles c:\XSPLK2ClassFiles
+
+:: Clone book files from GitHub
+"%ProgramFiles%\Git\bin\git.exe" clone https://github.com/PacktPublishing/Improving-your-Splunk-skills C:\Improving-your-Splunk-skills-master
+
+
 
 :: Download extract install everything else (merge with GitHub repo)
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadExtractInstall.ps1 -SetupRoot %SETUPROOT% -ClassSetupDir %CLASSID%

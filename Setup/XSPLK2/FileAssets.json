@@ -18,12 +18,3 @@
         "relativeInstallCommand" : "jdk-8u231-windows-x64.exe /s"
     }
 ]
-
-c_XSPLK2ClassFiles_BIG.zip,https://onlcsetup.blob.core.windows.net/setupfiles/c_XSPLK2ClassFiles_BIG.zip
-Setup_XSPLK2_Installers.zip,https://onlcsetup.blob.core.windows.net/setupfiles/Setup_XSPLK2_Installers.zip
-
-
-c_XSPLK2ClassFiles_BIG.zip,C:\XSPLK2ClassFiles
-Setup_XSPLK2_Installers.zip,C:\Setup\XSPLK2\Installers
-C_Improving-your-Splunk-skills-master.zip,C:\Improving-your-Splunk-skills-master
-curl-7.68.0-win64-mingw.zip,"C:\Program Files\curl-7.68.0-win64-mingw"
