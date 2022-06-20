@@ -47,8 +47,11 @@ PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 echo Installing Tableau Desktop
 TableauDesktop-64bit-2020-3-0.exe /quiet /norestart /log %SETUPDIR%\TableauDesktopSetupLog.log ACCEPTEULA=1
 
-echo Installing Alteryx Designer
-AlteryxTrialInstallx64_2020.4.5.12471.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+:: echo Installing Alteryx Designer
+:: AlteryxTrialInstallx64_2020.4.5.12471.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+
+echo Installing Alteryx Designer (2021)
+AlteryxNonAdminInstallx64_2021.4.2.02731.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
 
 :: Install databases
 echo Setting up SQL Server databases
