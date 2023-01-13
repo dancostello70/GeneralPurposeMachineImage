@@ -1,8 +1,8 @@
 @echo off
 :: Setup file for XALINS (Alteryx Concepts - Level 1)
 :: EDITED TO ADD: *and* XAL2NS (Alteryx Level 2)
-:: Version 2.0
-:: Last update: 16 April 2021
+:: Version 2.1
+:: Last update: 13 Jan 2023
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
@@ -53,8 +53,13 @@ TableauDesktop-64bit-2020-3-0.exe /quiet /norestart /log %SETUPDIR%\TableauDeskt
 :: echo Installing Alteryx Designer (2021)
 :: AlteryxNonAdminInstallx64_2021.4.2.02731.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
 
+:: echo Installing Alteryx Designer (2022)
+:: AlteryxNonAdminInstallx64_2022.1.1.40869.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+
 echo Installing Alteryx Designer (2022)
-AlteryxNonAdminInstallx64_2022.1.1.40869.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+AlteryxNonAdminInstallx64_2022.3.1.395.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+
+
 
 :: Install databases
 echo Setting up SQL Server databases
