@@ -15,7 +15,8 @@ $classesToDeploy = (
     # "BPBINT",
     #"APL300",
     #"XSPLK2",
-    "XALINS",
+    #"XALINS",
+    "XSQL01",
     "___END___"
 )
 

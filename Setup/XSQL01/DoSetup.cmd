@@ -1,8 +1,10 @@
 @echo off
 :: Setup file for XSQL01 (SQL Querying: Fundamentals)
-:: Version 1.0
-:: Last update: 27 Feb 2020
+:: Version 1.1
+:: Last update: 2 Feb 2023
 :: Author: Dan Costello (dan@costellotech.com)
+
+IF "%SETUPROOT%"=="" (SET SETUPROOT=%~dp0)
 
 SET CLASSID=XSQL01
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
