@@ -25,7 +25,7 @@ Set-Location $setupPath
 
 foreach ($item in $classesToDeploy) {
     if ($item -ne "___END___") {
-        Write-Host "Compresing $item"
+        Write-Host "Compressing $item"
         Compress-Archive -Force ./$item -DestinationPath "$targetPath/$item.zip"
         Write-Host "Uploading $item"
         c:/Utilities/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;    
