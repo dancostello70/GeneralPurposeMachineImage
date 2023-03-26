@@ -19,8 +19,13 @@ foreach($item in $fileAssets){
     }
 
     # Extract
-    Write-Host ("Extracting: {0}" -f $item.title)
-    Expand-Archive -Force -Path ("{0}\{1}" -f $archiveDir,$fileName) -DestinationPath ("{0}/" -f $extractTarget)
+    # check file extension of $fileName
+    # if .zip, use Expand-Archive
+    if ($fileName.Substring($fileName.Length - 4) -eq ".zip") {
+        Write-Host ("Extracting: {0}" -f $item.title)
+        Expand-Archive -Force -Path ("{0}\{1}" -f $archiveDir,$fileName) -DestinationPath ("{0}/" -f $extractTarget)
+    }
+    
 }
 
 # Install
