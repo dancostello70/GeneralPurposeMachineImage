@@ -1,3 +1,7 @@
+/*
+Updated 2023-03-26 to refer to current name of TailspinToys2020-US.bak
+*/
+
 USE [master]
 RESTORE DATABASE [TailspinToys2020-US] 
 FROM  DISK = N'D:\PL300\DatabaseBackup\TailspinToys2020-US-MSQL2017.bak' 

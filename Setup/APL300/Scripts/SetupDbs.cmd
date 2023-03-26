@@ -1,5 +1,11 @@
+:: Update 2023-03-26 to add DBData directory for PL300
+:: dan@costellotech.com
+
 @Echo Off
 ECHO Setting up SQL Server databases...
+
+:: Add data directory for PL300
+mkdir d:\PL300\DBData
 
 REM - Get current directory
 SET SUBDIR=%~dp0

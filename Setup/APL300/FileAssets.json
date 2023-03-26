@@ -1,13 +1,21 @@
 [
     {
-        "title" : "PL-300 Coursefiles" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/D_PL300_Mar2022.zip" ,
-        "extractTarget" : "d:\\PL300"
+        "title" : "PL-300 Coursefiles (GitHub)" ,
+        "downloadURL" : "https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/archive/refs/heads/Main.zip" ,
+        "extractTarget" : "c:\\",
+        "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\PL300 -Recurse" ,
+        "uninstallCommand" : "rmdir /s d:\\PL300"
     } ,    
     {
         "title" : "DA-100 Coursefiles" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/D_DA100_Aug2021.zip" ,
-        "extractTarget" : "d:\\DA100"
+        "extractTarget" : "d:\\DA100",
+        "uninstallCommand" : "rmdir /s d:\\DA100"
+    } ,   
+    {
+        "title" : "Tailspin Toys Sample Database (2017 version)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/data/TailspinToys2020-US-MSQL2017.bak" ,
+        "installCommand" : "Copy-Item c:\\Setup\\APL300\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\PL300\\DatabaseBackup\\"
     } ,
     {
         "title" : "Power BI Desktop (Version 2-115)" ,
@@ -23,4 +31,5 @@
         "installCommand" : "msiexec /i c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet" ,
         "uninstallCommand" : "msiexec /x c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet"
     }
+    
 ]
