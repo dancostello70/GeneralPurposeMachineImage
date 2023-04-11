@@ -1,0 +1,14 @@
+[
+    {
+        "title" : "DAX Intro Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/C_Coursefiles_DAXIntro.zip" ,
+        "extractTarget" : "c:\\Coursefiles",
+        "uninstallCommand" : "cmd /c rmdir /s /q c:\\Coursefiles"
+    } ,
+    {
+        "title" : "BPBEX1 Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_StudentFiles.zip" ,
+        "extractTarget" : "C:\\Users\\Student\\Desktop\\BPBEX1" ,
+        "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPBEX1"
+    }
+]
