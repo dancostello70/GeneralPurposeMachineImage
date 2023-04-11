@@ -10,5 +10,12 @@
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_StudentFiles.zip" ,
         "extractTarget" : "C:\\Users\\Student\\Desktop\\BPBEX1" ,
         "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPBEX1"
-    }
+    } ,
+    {
+        "title" : "PL-300 Coursefiles (GitHub)" ,
+        "downloadURL" : "https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/archive/refs/heads/Main.zip" ,
+        "extractTarget" : "c:\\",
+        "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\PL300 -Recurse" ,
+        "uninstallCommand" : "rmdir /s d:\\PL300"
+    } 
 ]

@@ -1,8 +1,15 @@
 # get temp directory from system environment variables
 $archiveDir = $env:TEMP
 
+#Coursefileassets.json URL
+$cfaUrl = "https://raw.githubusercontent.com/dancostello70/GeneralPurposeMachineImage/master/CourseFilesInstaller/CourseFileAssets.json"
 
-$fa = ConvertFrom-Json -InputObject $(Get-Content $("./CourseFileAssets.json") | Out-String)
+# Download the CourseFileAssets.json file
+Write-Host "Downloading CourseFileAssets.json"
+Start-BitsTransfer -Source $cfaUrl -Destination $archiveDir\CourseFileAssets.json
+
+# Load up the list of courses and files
+$fa = ConvertFrom-Json -InputObject $(Get-Content $("$archiveDir\CourseFileAssets.json") | Out-String)
 for ($i = 0; $i -lt $fa.Length; $i++) { Write-Host "$i $($fa[$i].title)" }
 
 # Get the number of the file to install from the user
