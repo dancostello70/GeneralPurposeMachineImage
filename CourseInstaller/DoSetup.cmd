@@ -1,11 +1,11 @@
 @echo off
-:: Setup file for APL300 (PL-300: Microsoft Power BI Data Analyst)
+:: Setup file for __ClassID__ (__ClassName__)
 :: Version 1.0
-:: Last update: 2022-03-08
+:: Last update: _____________
 :: Author: Dan Costello (dan@costellotech.com)
 
-IF "%SETUPROOT%"=="" (SET SETUPROOT=C:\Setup)
-SET CLASSID=APL300
+IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
+SET CLASSID=__ClassID__
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\%CLASSID%ClassFiles
@@ -23,20 +23,9 @@ powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadExtractInsta
 echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
 
-:: Install databases
-echo Setting up SQL Server databases
-call %SETUPDIR%\Scripts\SetupDbs.cmd
-
 :: Copy Desktop Files
 echo Copying desktop files
 xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
-
-:: Pin stuff to taskbar
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files (x86)\Power BI Report Builder\PowerBIReportBuilder.exe"
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe"
-
-:: Change the Execution Policy
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
 
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%

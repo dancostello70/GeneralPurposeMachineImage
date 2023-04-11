@@ -1,0 +1,21 @@
+[
+    {
+        "title" : "DAX Intro Coursefiles" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/C_Coursefiles_DAXIntro.zip" ,
+        "extractTarget" : "c:\\Coursefiles"
+    } ,
+    {
+        "title" : "Power BI Desktop (Version 2-96)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-96.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    } ,
+    {
+        "title" : "Dax Studio (Version 2-16-2)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_DaxStudio_2_16_2_setup.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "DaxStudio_2_16_2_setup.exe /VERYSILENT /NORESTART" ,
+        "uninstallCommand" : "\"C:\\Program Files\\DAX Studio\\unins000.exe\" /VERYSILENT /NORESTART"
+    }
+]
