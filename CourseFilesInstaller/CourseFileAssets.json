@@ -17,5 +17,13 @@
         "extractTarget" : "c:\\",
         "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\PL300 -Recurse" ,
         "uninstallCommand" : "rmdir /s d:\\PL300"
+    } ,
+    {
+        "title" : "BPQM01 Coursefiles",
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPQM01_StudentFiles.zip" ,
+        "extractTarget" : "c:\\",
+        "uninstallCommand" : "rmdir /s c:\\BPQM01_StudentFiles"
     } 
+
+
 ]
