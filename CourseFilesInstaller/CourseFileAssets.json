@@ -21,8 +21,9 @@
     {
         "title" : "BPQM01 Coursefiles",
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPQM01_StudentFiles.zip" ,
-        "extractTarget" : "c:\\",
-        "uninstallCommand" : "rmdir /s c:\\BPQM01_StudentFiles"
+        "extractTarget" : "C:\\Users\\Student\\Desktop\\",
+        "installCommand" : "Rename-Item C:\\Users\\Student\\Desktop\\power-query-for-power-bi-excel-master BPQM01",
+        "uninstallCommand" : "rmdir /s C:\\Users\\Student\\Desktop\\BPQM01"
     } 
 
 
