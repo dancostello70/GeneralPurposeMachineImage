@@ -1,7 +1,8 @@
 [
     {
         "title" : "PL-300 Coursefiles (GitHub)" ,
-        "downloadURL" : "https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/archive/refs/heads/Main.zip" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/PL-300-Microsoft-Power-BI-Data-Analyst-Main.zip" ,
+        "GHdownloadURL" : "https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/archive/refs/heads/Main.zip" ,
         "extractTarget" : "c:\\",
         "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\PL300 -Recurse" ,
         "uninstallCommand" : "rmdir /s d:\\PL300"
