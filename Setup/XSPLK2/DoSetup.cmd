@@ -22,11 +22,16 @@ winget
 powershell -ExecutionPolicy Bypass -Command "Start-Sleep 5"
 
 :: Install git
-winget install --id Git.Git -e --silent --accept-source-agreements --source winget
+::winget install --id Git.Git -e --silent --accept-source-agreements --source winget
+
+powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadGitInstaller.ps1 -SetupRoot %SETUPROOT% -ClassSetupDir %CLASSID%
+"%SETUPDIR%\Installers\Git-2.42.0.2-64-bit.exe" /VERYSILENT /NORESTART
 
 echo Beginning setup of %CLASSID%
 
 :: Clone class files from GitHub
+rd c:\XSPLK2ClassFiles /s /q
+
 "%ProgramFiles%\Git\bin\git.exe" clone https://github.com/ONLC-ClassMaterials/XSPLK2ClassFiles c:\XSPLK2ClassFiles
 
 :: Clone book files from GitHub

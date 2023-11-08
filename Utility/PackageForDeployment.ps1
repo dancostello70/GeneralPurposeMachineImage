@@ -5,24 +5,22 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2021-10-04&se=2023-10-27T13%3A40%3A53Z&sr=c&sp=rwl&sig=JgdJ01AUFgc3T5HH%2FTrJCTUCkGRWj%2BdImgTeQ4Lr3Ng%3D"
-
-
-
+$AzCopyParams="sv=2021-10-04&se=2023-12-07T23%3A54%3A13Z&sr=c&sp=rwl&sig=numVP17IWaHsCFiEQrLD4euodh878oB%2B8unGUuqiNZE%3D"
 
 $classesToDeploy = (
     # "BPBEX1",
     # "A20779",
     # "BPBEX1_new",
     # "BPBINT",
-    "APL300",
-    #"XSPLK2",
+    #"APL300",
+    "XSPLK2",
     #"XALINS",
     #"XSQL01",
     "___END___"
 )
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
+$env:AZCOPY_CONCURRENCY_VALUE = "AUTO";
 Set-Location $setupPath
 
 foreach ($item in $classesToDeploy) {
@@ -30,7 +28,7 @@ foreach ($item in $classesToDeploy) {
         Write-Host "Compressing $item"
         Compress-Archive -Force ./$item -DestinationPath "$targetPath/$item.zip"
         Write-Host "Uploading $item"
-        c:/Utilities/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;    
+        c:/Utilities/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --check-length=true --put-md5 --follow-symlinks --disable-auto-decoding=false --recursive --log-level=INFO;   
     }    
 }
 
@@ -87,6 +85,7 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 
 
 $env:AZCOPY_CRED_TYPE = "";
+$env:AZCOPY_CONCURRENCY_VALUE = "";
 
 
 
