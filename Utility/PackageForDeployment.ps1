@@ -5,7 +5,9 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2021-10-04&se=2023-12-07T23%3A54%3A13Z&sr=c&sp=rwl&sig=numVP17IWaHsCFiEQrLD4euodh878oB%2B8unGUuqiNZE%3D"
+$AzCopyParams="sv=2023-01-03&se=2024-03-18T18%3A39%3A46Z&sr=c&sp=rwl&sig=EzPEhbLR6lYb%2FgatMWcq%2F0ubXt1uy3PcENBcd%2BvKqXA%3D"
+
+
 
 $classesToDeploy = (
     # "BPBEX1",
@@ -13,9 +15,10 @@ $classesToDeploy = (
     # "BPBEX1_new",
     # "BPBINT",
     #"APL300",
-    "XSPLK2",
+    #"XSPLK2",
     #"XALINS",
     #"XSQL01",
+    "XFB1NS",
     "___END___"
 )
 

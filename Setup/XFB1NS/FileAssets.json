@@ -1,0 +1,18 @@
+[
+ 
+    {
+        "title" : "Power BI Desktop (Version 2-126)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-126.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    } ,
+    {
+        "title" : "Power BI Report Builder (Version 15.7)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PowerBiReportBuilder_v15_7.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "installCommand" : "msiexec /i c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet" ,
+        "uninstallCommand" : "msiexec /x c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet"
+    }
+    
+]
