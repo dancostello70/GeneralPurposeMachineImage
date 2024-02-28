@@ -1,6 +1,23 @@
 :: Do installations
 cd %SETUPDIR%\Installers
 
+:: Notepad++
+echo Installing Notepad++
+npp.8.5.8.Installer.x64.exe /S
+
+:: Git
+echo Installing Git
+Git-2.42.0.2-64-bit.exe /VERYSILENT /NORESTART
+
+:: Python
+echo Installing Python
+python-3.12.2-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+
+:: VS Code
+echo Installing Visual Studio Code
+VSCodeSetup-x64-1.83.1.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode,addcontextmenufiles,addcontextmenufolders
+
+
 echo Installing Power BI Desktop
 PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1
 

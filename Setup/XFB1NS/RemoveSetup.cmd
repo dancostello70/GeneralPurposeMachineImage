@@ -1,14 +1,14 @@
 ::@echo off
-:: Uninstall file for APL300 (PL-300: Microsoft Power BI Data Analyst)
+:: Uninstall file for XFB1NS (Microsoft Fabric: Getting Started)
 :: Version 1.0
-:: Last update: 2022-03-08
+:: Last update: 2024-02-19
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
-SET CLASSID=APL300
+SET CLASSID=XFB1NS
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\%CLASSID%_UninstallLog.log
-SET CLASSDIR=D:\PL300
+SET CLASSDIR=D:\XFB1NS
 
 :: Start log
 echo Beginning uninstall > %LOGFILE%

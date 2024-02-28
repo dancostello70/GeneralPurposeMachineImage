@@ -13,6 +13,41 @@
         "relativeExtractTarget" : "Installers" ,
         "installCommand" : "msiexec /i c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet" ,
         "uninstallCommand" : "msiexec /x c:\\Setup\\APL300\\Installers\\PowerBiReportBuilder.en-US.msi /quiet"
+    } ,
+    {
+        "title" : "Visual Studio Code (Version 1.83.1)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_VSCodeSetup-x64-1.83.1.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "VSCodeSetup-x64-1.83.1.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode,addcontextmenufiles,addcontextmenufolders" ,
+        "uninstallCommand" : "\"C:\\Program Files\\Microsoft VS Code\\unins000.exe\" /VERYSILENT /NORESTART"
+    } ,
+    {
+        "title" : "Git (Version 2.42.0)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_Git-2.42.0.2-64-bit.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "Git-2.42.0.2-64-bit.exe /VERYSILENT /NORESTART" ,
+        "uninstallCommand" : "\"C:\\Program Files\\Git\\unins000.exe\" /VERYSILENT /NORESTART"
+    } ,
+    {
+        "title" : "Notepad++ (Version 8.5.8)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_npp.8.5.8.Installer.x64.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "npp.8.5.8.Installer.x64.exe /S" ,
+        "uninstallCommand" : "\"C:\\Program Files (x86)\\Notepad++\\uninstall.exe\" /S"
+    } ,
+    {
+        "title" : "Python (Version 3.12.2)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_python-3.12.2-amd64.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "python-3.12.2-amd64.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0" ,
+        "uninstallCommand" : ""
+    } ,
+    {
+        "title" : "Azure Data Studio (Version 1.47.1)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_azuredatastudio-1.47.1.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "azuredatastudio-windows-setup-1.47.1.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode" ,
+        "uninstallCommand" : "\"C:\\Program Files\\Azure Data Studio\\unins000.exe\"  /VERYSILENT /NORESTART"
     }
     
 ]

@@ -23,6 +23,12 @@ powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadExtractInsta
 echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
 
+:: Wait 5 seconds before the git clone
+powershell -ExecutionPolicy Bypass -Command "Start-Sleep 5"
+
+:: Clone github repos
+git clone https://github.com/MicrosoftLearning/dp-data d:\dp-data
+
 :: Install databases
 :: echo Setting up SQL Server databases
 :: call %SETUPDIR%\Scripts\SetupDbs.cmd
@@ -36,10 +42,10 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\PinToTaskbar.ps1 -Target "C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe"
 
 :: Change the Execution Policy
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
 
 :: Send an alert
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
 
 :: Log process complete
 echo Setup completed >> %LOGFILE%
