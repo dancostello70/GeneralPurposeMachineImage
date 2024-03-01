@@ -56,8 +56,11 @@ TableauDesktop-64bit-2020-3-0.exe /quiet /norestart /log %SETUPDIR%\TableauDeskt
 :: echo Installing Alteryx Designer (2022)
 :: AlteryxNonAdminInstallx64_2022.1.1.40869.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
 
-echo Installing Alteryx Designer (2022)
-AlteryxNonAdminInstallx64_2022.3.1.395.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+:: echo Installing Alteryx Designer (2022)
+:: AlteryxNonAdminInstallx64_2022.3.1.395.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
+
+echo Installing Alteryx Designer (2023)
+AlteryxNonAdminInstallx64_2023.2.1.89.exe /s /l=%SETUPDIR%\AlteryxInstallLog.log
 
 
 
