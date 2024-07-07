@@ -1,9 +1,12 @@
 @echo off
-:: Setup file for BPBEX1 (POwer BI for Excel Users)
+:: Setup file for BPBEX1 (Power BI for Excel Users)
 :: Also BPQM01 and WEXF01
-:: Version 1.0
-:: Last update: 22 Jun 2020
+:: Version 1.1
+:: Last update: 1 Jul 2024
 :: Author: Dan Costello (dan@costellotech.com)
+:: Notes:   - Updated version of Power BI to Nov 2023 version (2.123.742.0)
+::          - Added data files for web-based labs
+::          - Updated lab solution files
 
 SET CLASSID=BPBEX1
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
