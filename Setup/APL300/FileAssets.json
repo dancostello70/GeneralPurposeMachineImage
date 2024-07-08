@@ -4,14 +4,8 @@
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/PL-300-Microsoft-Power-BI-Data-Analyst-Main.zip" ,
         "GHdownloadURL" : "https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/archive/refs/heads/Main.zip" ,
         "extractTarget" : "c:\\",
-        "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\PL300 -Recurse" ,
-        "uninstallCommand" : "rmdir /s d:\\PL300"
-    } ,    
-    {
-        "title" : "DA-100 Coursefiles" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/D_DA100_Aug2021.zip" ,
-        "extractTarget" : "d:\\DA100",
-        "uninstallCommand" : "rmdir /s d:\\DA100"
+        "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\Allfiles -Recurse" ,
+        "uninstallCommand" : "rmdir /s d:\\Allfiles"
     } ,   
     {
         "title" : "Tailspin Toys Sample Database (2017 version)" ,
@@ -19,8 +13,8 @@
         "installCommand" : "Copy-Item c:\\Setup\\APL300\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\PL300\\DatabaseBackup\\"
     } ,
     {
-        "title" : "Power BI Desktop (Version 2-115)" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-115.zip" ,
+        "title" : "Power BI Desktop (Version 2-123)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-123.zip" ,
         "relativeExtractTarget" : "Installers" ,
         "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
         "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
