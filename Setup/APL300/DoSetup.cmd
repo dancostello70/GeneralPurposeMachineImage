@@ -8,7 +8,7 @@ IF "%SETUPROOT%"=="" (SET SETUPROOT=C:\Setup)
 SET CLASSID=APL300
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
-SET CLASSDIR=C:\%CLASSID%ClassFiles
+SET CLASSDIR=D:\Allfiles
 
 
 :: Start log
@@ -24,6 +24,7 @@ echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
 
 :: Install databases
+:: 2024-07-09 updated to add Allfiles\DBData directory for PL300
 echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
 

@@ -4,13 +4,13 @@
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/PL-300-Microsoft-Power-BI-Data-Analyst-Main.zip" ,
         "GHdownloadURL" : "https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/archive/refs/heads/Main.zip" ,
         "extractTarget" : "c:\\",
-        "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\Allfiles -Recurse" ,
+        "installCommand" : "Copy-Item c:\\PL-300-Microsoft-Power-BI-Data-Analyst-Main\\Allfiles d:\\ -Recurse" ,
         "uninstallCommand" : "rmdir /s d:\\Allfiles"
     } ,   
     {
         "title" : "Tailspin Toys Sample Database (2017 version)" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/data/TailspinToys2020-US-MSQL2017.bak" ,
-        "installCommand" : "Copy-Item c:\\Setup\\APL300\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\PL300\\DatabaseBackup\\"
+        "installCommand" : "Copy-Item c:\\Setup\\Allfiles\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\Allfiles\\DatabaseBackup\\"
     } ,
     {
         "title" : "Power BI Desktop (Version 2-123)" ,
