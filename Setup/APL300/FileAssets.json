@@ -10,7 +10,7 @@
     {
         "title" : "Tailspin Toys Sample Database (2017 version)" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/data/TailspinToys2020-US-MSQL2017.bak" ,
-        "installCommand" : "Copy-Item c:\\Setup\\Allfiles\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\Allfiles\\DatabaseBackup\\"
+        "installCommand" : "Copy-Item c:\\Setup\\APL300\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\Allfiles\\DatabaseBackup\\"
     } ,
     {
         "title" : "Power BI Desktop (Version 2-123)" ,
