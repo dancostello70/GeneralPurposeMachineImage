@@ -13,11 +13,12 @@
         "installCommand" : "Copy-Item c:\\Setup\\APL300\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\Allfiles\\DatabaseBackup\\"
     } ,
     {
-        "title" : "Power BI Desktop (Version 2-123)" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-123.zip" ,
+        "title" : "Power BI Desktop (Version 2-130)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-130.zip" ,
         "relativeExtractTarget" : "Installers" ,
         "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
-        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall" ,
+        "devNotes" : "2024-08-06 -- updated Power BI Desktop to version 2.130"
     } ,
     {
         "title" : "Power BI Report Builder (Version 15.7)" ,
