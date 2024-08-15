@@ -1,7 +1,8 @@
 [
     {
+        "devNotes" : "Updated 2024-08-10 with new files for Jun 2024 version of Power BI Desktop" ,
         "title" : "BPBEX1 Coursefiles" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_StudentFiles.zip" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_StudentFiles_Jun24.zip" ,
         "extractTarget" : "C:\\Users\\Student\\Desktop\\BPBEX1" ,
         "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPBEX1"
     } ,
@@ -18,10 +19,11 @@
         "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPQM01"
     } ,
     {
-        "title" : "Power BI Desktop (Version 2-97)" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-97.zip" ,
+        "title" : "Power BI Desktop (Version 2-130)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-130.zip" ,
         "relativeExtractTarget" : "Installers" ,
         "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
-        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall" ,
+        "devNotes" : "2024-08-10 -- updated Power BI Desktop to version 2.130"
     }
 ]
