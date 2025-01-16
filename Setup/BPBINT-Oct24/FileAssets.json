@@ -1,0 +1,29 @@
+[
+    {
+        "title" : "Power BI Intermediate Demo Files (Oct 24 version)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTDemoFiles-Oct24.zip" ,
+        "extractTarget" : "C:\\Coursefiles"
+    } ,
+    {
+        "title" : "Power BI Intermediate Labfiles (Oct 24 version)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTLabfiles-Oct24.zip" ,
+        "extractTarget" : "C:\\Coursefiles"
+    } ,
+    {
+        "title" : "Power BI Intermediate Solutions (Oct 24 version)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTLabSolutions-Oct24.zip" ,
+        "extractTarget" : "C:\\Coursefiles"
+    } ,
+    {
+        "title" : "BI Data (Oct 24 version)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTDemoData-Oct24.zip" ,
+        "extractTarget" : "C:\\Coursefiles"
+    } ,
+    {
+        "title" : "Power BI Desktop (Version 2-137)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-137.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    }
+]
