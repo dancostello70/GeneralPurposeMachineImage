@@ -15,8 +15,13 @@
         "extractTarget" : "C:\\Coursefiles"
     } ,
     {
-        "title" : "BI Data (Oct 24 version)" ,
+        "title" : "BI Demo Data (Oct 24 version)" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBINTDemoData-Oct24.zip" ,
+        "extractTarget" : "C:\\Coursefiles"
+    } ,
+    {
+        "title" : "BI Data" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BIData.zip" ,
         "extractTarget" : "C:\\Coursefiles"
     } ,
     {
