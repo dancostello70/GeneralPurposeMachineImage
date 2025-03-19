@@ -1,0 +1,21 @@
+[
+    {
+        "title" : "PL-300 Allfiles directory (Oct 24 Version)" ,
+        "downloadURL" : "https://onlcfiles.blob.core.windows.net/coursefiles/PL-300-AllfilesDownload-Oct24.zip" ,
+        "extractTarget" : "D:\\",
+        "uninstallCommand" : "rmdir /s d:\\Allfiles"
+    } ,   
+    {
+        "title" : "Tailspin Toys Sample Database (2017 version)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/data/TailspinToys2020-US-MSQL2017.bak" ,
+        "installCommand" : "Copy-Item c:\\Setup\\APL300\\Archives\\TailspinToys2020-US-MSQL2017.bak d:\\Allfiles\\DatabaseBackup\\"
+    } ,
+    {
+        "title" : "Power BI Desktop (Version 2-137)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Setup_ANY_Installers_PBIDesktop-2-137.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    }
+    
+]
