@@ -5,7 +5,7 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2023-01-03&se=2025-04-18T14%3A12%3A34Z&sr=c&sp=rwl&sig=ZG1hUc7XDRRMxur%2BEcoYlPmXnhUG3Kd97w3jOcK99Sw%3D"
+$AzCopyParams="sv=2023-01-03&se=2025-04-18T22%3A58%3A19Z&sr=c&sp=rwl&sig=QPnNMZOUaqJCWTNrbB1F%2BGYsV1TDf0DmEQFCxxyruQo%3D"
 
 $classesToDeploy = (
     # "BPBEX1",
@@ -105,3 +105,4 @@ $env:AZCOPY_CONCURRENCY_VALUE = "";
 
 
 Set-Location $setupPath
+
