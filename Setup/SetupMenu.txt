@@ -13,3 +13,4 @@
 13. Analyzing Data with Excel (A20779),A20779
 14. PL-300: Microsoft Power BI Data Analyst (APL300),APL300-Oct24
 15. Microsoft Fabric: Getting Started (XFB1NS),XFB1NS
+16. XSQL01/02: SQL Querying: Fundamentals/Advanced (XSQL01/XSQL02),XSQL-01-02-v2

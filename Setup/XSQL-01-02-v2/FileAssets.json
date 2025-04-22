@@ -1,0 +1,33 @@
+[
+    {
+        "title" : "Pub1 data files" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Pub1_datafiles.zip" ,
+        "ExtractTarget" : "C:\\094018Data\\"
+    },
+    {
+        "title" : "Pub2 data files" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Pub2_datafiles.zip" ,
+        "ExtractTarget" : "C:\\094030Data\\"
+    },
+    {
+        "title" : "XSQL01 Lab files" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/094029DATA.zip" ,
+        "ExtractTarget" : "C:\\094029DATA\\"
+    },
+    {
+        "title" : "XSQL02 Lab files" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/094030DATA.zip" ,
+        "ExtractTarget" : "C:\\094030DATA\\"
+    },
+    {
+        "title" : "Database scripts" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/pub1_pub2_scripts.zip" ,
+        "relativeExtractTarget" : "Scripts"
+    },
+    {
+        "title" : "2017 Database scripts" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/2017_pub1_pub2_scripts.zip" ,
+        "relativeExtractTarget" : "Scripts"
+    }
+]
+
