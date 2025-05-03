@@ -33,7 +33,7 @@ echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
 
 :: Send an alert
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
 
 :: Log process complete
 echo Setup completed >> %LOGFILE%
