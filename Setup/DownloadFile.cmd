@@ -11,6 +11,6 @@ if "%~2"=="" (
 )
 
 set "URL=%~1"
-set "OUTFILE=%CD%\%~2"
+set "OUTFILE=c:\Setup\%~2"
 
 powershell -NoProfile -Command "Start-BitsTransfer -Source '%URL%' -Destination '%OUTFILE%'"
