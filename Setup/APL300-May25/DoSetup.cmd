@@ -10,6 +10,7 @@ SET CLASSID=APL300-May25
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=D:\Allfiles
+SET PL300DIR=D:\PL-300-Microsoft-Power-BI-Data-Analyst
 
 
 :: Start log
@@ -23,6 +24,15 @@ powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadExtractInsta
 
 echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
+
+:: Clone repo to PL-300-Microsoft-Power-BI-Data-Analyst directory
+echo Cloning PL-300 GitHub repository
+git clone https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst.git %PL300DIR%
+
+:: Copy all zip files in all subdirectories of D:\PL-300-Microsoft-Power-BI-Data-Analyst-Main\Allfiles\Labs directly into Downloads (no subfolders)
+echo Copying lab zip files to Downloads folder
+if not exist "C:\Users\Student\Downloads" mkdir "C:\Users\Student\Downloads"
+for /R "%PL300DIR%\Allfiles\Labs" %%F in (*.zip) do copy /Y "%%F" "C:\Users\Student\Downloads\"
 
 :: Install databases
 :: 2024-07-09 updated to add Allfiles\DBData directory for PL300

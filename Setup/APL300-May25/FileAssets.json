@@ -1,5 +1,12 @@
 [
     {
+        "title" : "Git (Version 2.42.0)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_Git-2.42.0.2-64-bit.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "Git-2.42.0.2-64-bit.exe /VERYSILENT /NORESTART" ,
+        "uninstallCommand" : "\"C:\\Program Files\\Git\\unins000.exe\" /VERYSILENT /NORESTART"
+    } ,
+    {
         "title" : "PL-300 Allfiles directory (May 25 Version)" ,
         "downloadURL" : "https://onlcfiles.blob.core.windows.net/coursefiles/PL-300-Allfiles-May25.zip" ,
         "extractTarget" : "D:\\",
