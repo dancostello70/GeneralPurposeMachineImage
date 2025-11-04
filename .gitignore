@@ -10,3 +10,4 @@ BigFiles/
 ZipFiles/
 ExtraStuff/
 PackageForDeployment.ps1
+Utility/PackageForDeployment.ps1

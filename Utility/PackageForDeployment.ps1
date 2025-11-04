@@ -5,7 +5,7 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams=""
+$AzCopyParams="sv=2025-07-05&se=2025-12-04T04%3A16%3A39Z&sr=c&sp=rwl&sig=7rPVSVj%2FRFQA3z5vgUMzX6FoaWacr5OiqAttXkkmNxE%3D"
 
 
 $classesToDeploy = (
