@@ -27,7 +27,7 @@ time /t >> %LOGFILE%
 
 :: Clone repo to PL-300-Microsoft-Power-BI-Data-Analyst directory
 echo Cloning PL-300 GitHub repository
-git clone https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst.git %PL300DIR%
+start git clone https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst.git %PL300DIR%
 
 :: Copy all zip files in all subdirectories of D:\PL-300-Microsoft-Power-BI-Data-Analyst-Main\Allfiles\Labs directly into Downloads (no subfolders)
 echo Copying lab zip files to Downloads folder
