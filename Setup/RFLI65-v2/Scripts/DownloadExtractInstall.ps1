@@ -9,18 +9,32 @@ $fileAssets = ConvertFrom-Json -InputObject $(Get-Content $("$setupDir/FileAsset
 # Download and extract
 foreach($item in $fileAssets){
     $fileName = if ($item.downloadFileName) { $item.downloadFileName } else { Split-Path $item.downloadURL -Leaf }
-    $destinationFile = ("{0}\{1}" -f $archiveDir,$fileName)
-    $extractTarget = @{$true=("{0}\{1}" -f $setupDir, $item.relativeExtractTarget); $false=$item.extractTarget}[$item.relativeExtractTarget.Length -gt 0]
-    # Download to the archive directory
+    
+    # Determine download destination
+    $downloadTarget = if ($item.relativeDownloadTarget.Length -gt 0) {
+        ("{0}\{1}\{2}" -f $setupDir, $item.relativeDownloadTarget, $fileName)
+    } elseif ($item.downloadTarget.Length -gt 0) {
+        ("{0}\{1}" -f $item.downloadTarget, $fileName)
+    } else {
+        ("{0}\{1}" -f $archiveDir, $fileName)
+    }
+    
+    # Determine if extraction is needed
+    $shouldExtract = !($item.downloadTarget.Length -gt 0 -or $item.relativeDownloadTarget.Length -gt 0)
+    
+    # Download
     Write-Host ("Downloading: {0}" -f $item.title)
-    while(!(Test-Path -Path $destinationFile)){
-        Start-BitsTransfer -Source $item.downloadURL -Destination $destinationFile
+    while(!(Test-Path -Path $downloadTarget)){
+        Start-BitsTransfer -Source $item.downloadURL -Destination $downloadTarget
         Start-Sleep -Seconds 5
     }
 
-    # Extract
-    Write-Host ("Extracting: {0}" -f $item.title)
-    Expand-Archive -Force -Path ("{0}\{1}" -f $archiveDir,$fileName) -DestinationPath ("{0}/" -f $extractTarget)
+    # Extract only if no direct download target was specified
+    if ($shouldExtract) {
+        $extractTarget = @{$true=("{0}\{1}" -f $setupDir, $item.relativeExtractTarget); $false=$item.extractTarget}[$item.relativeExtractTarget.Length -gt 0]
+        Write-Host ("Extracting: {0}" -f $item.title)
+        Expand-Archive -Force -Path $downloadTarget -DestinationPath ("{0}/" -f $extractTarget)
+    }
 }
 
 # Install
