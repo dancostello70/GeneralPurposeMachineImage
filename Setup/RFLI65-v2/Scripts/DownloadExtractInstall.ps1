@@ -8,7 +8,7 @@ $fileAssets = ConvertFrom-Json -InputObject $(Get-Content $("$setupDir/FileAsset
 
 # Download and extract
 foreach($item in $fileAssets){
-    $fileName = Split-Path $item.downloadURL -Leaf
+    $fileName = if ($item.downloadFileName) { $item.downloadFileName } else { Split-Path $item.downloadURL -Leaf }
     $destinationFile = ("{0}\{1}" -f $archiveDir,$fileName)
     $extractTarget = @{$true=("{0}\{1}" -f $setupDir, $item.relativeExtractTarget); $false=$item.extractTarget}[$item.relativeExtractTarget.Length -gt 0]
     # Download to the archive directory

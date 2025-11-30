@@ -9,6 +9,7 @@
     {
         "title" : "Power Automate for Desktop (Current version)" ,
         "downloadURL" : "https://go.microsoft.com/fwlink/?linkid=2102613" ,
+        "downloadFileName" : "Setup.Microsoft.PowerAutomate.exe" ,
         "relativeExtractTarget" : "Installers" ,
         "relativeInstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Install -ACCEPTEULA" ,
         "relativeUninstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Uninstall -norestart"
