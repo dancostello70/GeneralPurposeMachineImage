@@ -1,14 +1,14 @@
 @echo off
-:: Setup file for __ClassID__ (__ClassName__)
+:: Setup file for RFLI65-v2 (Power Automate: Introduction for End Users)
 :: Version 1.0
-:: Last update: _____________
+:: Last update: 2025-11-30
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" SET SETUPROOT=C:\Setup
-SET CLASSID=__ClassID__
+SET CLASSID=RFLI65-v2
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
-SET CLASSDIR=C:\%CLASSID%ClassFiles
+SET CLASSDIR=C:\RFLI65-Power-Automate-Intro
 
 
 :: Start log
@@ -24,8 +24,8 @@ echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
 
 :: Clone git repo
-:: echo Cloning __ClassID__ GitHub repository
-:: "%PROGRAMFILES%\Git\cmd\git.exe" clone _________________
+echo Cloning RFLI65-v2 GitHub repository
+"%PROGRAMFILES%\Git\cmd\git.exe" clone https://github.com/ONLC-ClassMaterials/RFLI65-Power-Automate-Intro.git %CLASSDIR%
 
 
 :: Copy Desktop Files

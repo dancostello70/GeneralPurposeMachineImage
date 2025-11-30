@@ -1,0 +1,16 @@
+[
+    {
+        "title" : "Git (Version 2.42.0)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_Git-2.42.0.2-64-bit.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "Git-2.42.0.2-64-bit.exe /VERYSILENT /NORESTART" ,
+        "uninstallCommand" : "\"C:\\Program Files\\Git\\unins000.exe\" /VERYSILENT /NORESTART"
+    } ,
+    {
+        "title" : "Power Automate for Desktop (Current version)" ,
+        "downloadURL" : "https://go.microsoft.com/fwlink/?linkid=2102613" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Install -ACCEPTEULA" ,
+        "relativeUninstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Uninstall -norestart"
+    } 
+]

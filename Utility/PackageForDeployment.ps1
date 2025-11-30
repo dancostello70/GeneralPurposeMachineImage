@@ -21,7 +21,8 @@ $classesToDeploy = (
     #"BPBINT-Oct24",
     # "APL300-Oct24",
     # "XSQL-01-02-v2",
-    "APL300-May25",
+    # "APL300-May25",
+    "RFLI65-v2",
     "___END___"
 )
 
