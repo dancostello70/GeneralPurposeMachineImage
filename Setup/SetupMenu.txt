@@ -14,3 +14,4 @@
 14. PL-300: Microsoft Power BI Data Analyst (APL300),APL300-May25
 15. Microsoft Fabric: Getting Started (XFB1NS),XFB1NS
 16. XSQL01/02: SQL Querying: Fundamentals/Advanced (XSQL01/XSQL02),XSQL-01-02-v2
+17. Power Automate: Introduction for End Users (RFLI65),RFLI65-v2
