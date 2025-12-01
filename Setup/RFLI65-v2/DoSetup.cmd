@@ -23,6 +23,11 @@ powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\DownloadExtractInsta
 echo Download setup install complete >> %LOGFILE%
 time /t >> %LOGFILE%
 
+:: Pause for 5 seconds
+echo Pausing for 5 seconds...
+timeout /t 5 /nobreak > nul
+echo Pause complete >> %LOGFILE%
+
 :: Clone git repo
 echo Cloning RFLI65-v2 GitHub repository
 "%PROGRAMFILES%\Git\cmd\git.exe" clone https://github.com/ONLC-ClassMaterials/RFLI65-Power-Automate-Intro.git %CLASSDIR%
