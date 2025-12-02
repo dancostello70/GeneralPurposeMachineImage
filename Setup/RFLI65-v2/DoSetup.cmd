@@ -29,9 +29,7 @@ timeout /t 5 /nobreak > nul
 echo Pause complete >> %LOGFILE%
 
 :: Clone git repo
-echo Cloning RFLI65-v2 GitHub repository
-"%PROGRAMFILES%\Git\cmd\git.exe" clone https://github.com/ONLC-ClassMaterials/RFLI65-Power-Automate-Intro.git %CLASSDIR%
-
+start /WAIT cmd /C "%SETUPDIR%\Scripts\CloneGitRepo.cmd"
 
 :: Copy Desktop Files
 echo Copying desktop files
