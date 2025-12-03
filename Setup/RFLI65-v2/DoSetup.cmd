@@ -29,7 +29,7 @@ timeout /t 5 /nobreak > nul
 echo Pause complete >> %LOGFILE%
 
 :: Clone git repo
-start /WAIT cmd /C "%SETUPDIR%\Scripts\CloneGitRepo.cmd"
+:: start /WAIT cmd /C "%SETUPDIR%\Scripts\CloneGitRepo.cmd"
 
 :: Copy Desktop Files
 echo Copying desktop files
