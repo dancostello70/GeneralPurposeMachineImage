@@ -14,6 +14,12 @@
         "relativeInstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Install -ACCEPTEULA" ,
         "relativeUninstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Uninstall -norestart"
     } ,
+    {
+        "title" : "Contoso Invoicing App" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/installers/ContosoInvoicingSetup.msi" ,
+        "relativeDownloadTarget" : "Installers" ,
+        "installCommand" : "msiexec /q /i C:\\Setup\\RFLI65-v2\\Installers\\ContosoInvoicingSetup.msi"
+    } ,
    {
         "title" : "Power Automate for Desktop (Current version)" ,
         "downloadURL" : "https://github.com/ONLC-ClassMaterials/RFLI65-Power-Automate-Intro/archive/refs/heads/main.zip" ,
