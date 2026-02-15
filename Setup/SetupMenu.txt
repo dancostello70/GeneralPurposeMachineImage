@@ -8,7 +8,7 @@
 8. R Programming Introduction (XRPINP),XRPINP
 9. Analyzing Data with Power BI (ADA100),ADA100
 10. Alteryx Level 1/Level 2 (XALINS-XAL2NS),XALINS
-11. Power BI Tools: DAX Introduction (BDXM01),BDXM01n
+11. Power BI Tools: DAX Introduction (BDXM01),BDXM01-May25
 12. Java Programming Level 1/Level 2 (XJV1NS-XJV2NS),XJV1NS
 13. Analyzing Data with Excel (A20779),A20779
 14. PL-300: Microsoft Power BI Data Analyst (APL300),APL300-May25

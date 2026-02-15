@@ -1,0 +1,23 @@
+[
+    {
+        "title" : "DAX Intro Coursefiles (2nd edition, version 2.8)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/DAXIntro-2.8.zip" ,
+        "extractTarget" : "c:\\Coursefiles",
+        "psInstallCommand" : "Rename-Item -Path \"c:\\Coursefiles\\DAXIntro-2.8\" -NewName \"c:\\Coursefiles\\DAXIntro\"" ,
+        "psUninstallCommand" : "Remove-Item -Path \"c:\\Coursefiles\\DAXIntro\" -Recurse -Force"
+    } ,
+    {
+        "title" : "Power BI Desktop (May 25 Version, 2.143.1378.0)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/PBIDesktopSetup-2025-05_x64.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "installCommand" : "PBIDesktopSetup-2025-05_x64.exe -q ACCEPT_EULA=1" ,
+        "relativeUninstallCommand" : "PBIDesktopSetup-2025-05_x64.exe -q -norestart -uninstall"
+    } ,
+    {
+        "title" : "Dax Studio (Version 3-3-3, August 8, 2025)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/DaxStudio_3_3_3_setup.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "installCommand" : "DaxStudio_3_3_3_setup.exe /VERYSILENT /ALLUSERS /NORESTART" ,
+        "uninstallCommand" : "\"C:\\Program Files\\DAX Studio\\unins000.exe\" /VERYSILENT /NORESTART"
+    }
+]

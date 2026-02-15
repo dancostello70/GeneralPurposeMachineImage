@@ -5,7 +5,7 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2025-07-05&se=2025-12-04T04%3A16%3A39Z&sr=c&sp=rwl&sig=7rPVSVj%2FRFQA3z5vgUMzX6FoaWacr5OiqAttXkkmNxE%3D"
+$AzCopyParams="sv=2025-07-05&se=2026-03-17T16%3A53%3A50Z&sr=c&sp=rwl&sig=MFhy6KKZTwUEthbMODOti4iY41DtlmATSuoeeFga4rA%3D"
 
 
 $classesToDeploy = (
@@ -22,12 +22,17 @@ $classesToDeploy = (
     # "APL300-Oct24",
     # "XSQL-01-02-v2",
     # "APL300-May25",
-    "RFLI65-v2",
+    # "RFLI65-v2",
+    "BDXM01-May25",
     "___END___"
 )
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 $env:AZCOPY_CONCURRENCY_VALUE = "AUTO";
+$env:HTTPS_PROXY = "dummy.invalid";
+$env:NO_PROXY = "*";
+$env:https_proxy = "dummy.invalid";
+$env:no_proxy = "*";
 Set-Location $setupPath
 
 foreach ($item in $classesToDeploy) {
@@ -93,6 +98,10 @@ $env:AZCOPY_CRED_TYPE = "Anonymous";
 
 $env:AZCOPY_CRED_TYPE = "";
 $env:AZCOPY_CONCURRENCY_VALUE = "";
+$env:HTTPS_PROXY = "";
+$env:NO_PROXY = "";
+$env:https_proxy = "";
+$env:no_proxy = "";
 
 
 
