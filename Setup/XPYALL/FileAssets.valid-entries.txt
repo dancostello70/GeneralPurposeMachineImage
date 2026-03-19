@@ -1,0 +1,53 @@
+FileAssets.json valid entries (as parsed by Scripts/DownloadExtractInstall.ps1)
+
+- title
+  Display name used in progress messages during download, extract, and install.
+
+- downloadURL
+  Source URL for the archive to download. The file name is derived from the URL.
+
+- extractTarget
+  Absolute path where the archive is extracted when relativeExtractTarget is empty.
+
+- relativeExtractTarget
+  Folder under the class setup directory where the archive is extracted. If present,
+  this is used instead of extractTarget.
+
+- relativeInstallCommand
+  Installer command line relative to the Installers folder. Some scripts run this
+  as "<Installers>\<relativeInstallCommand>".
+
+- installCommand
+  Installer command line used as-is (full command or script). Some scripts run this
+  with no Installers prefix; others may prepend the Installers folder.
+
+- psInstallCommand
+  Full PowerShell command line to run after extraction. Executed via Invoke-Expression
+  as-is.
+
+- relativeUninstallCommand
+  Uninstall command line relative to the Installers folder. Used by UninstallAll.ps1
+  to run "<Installers>\<relativeUninstallCommand>".
+
+- uninstallCommand
+  Uninstall command line used as-is (full command or script). Used by UninstallAll.ps1
+  with no Installers prefix.
+
+- psUninstallCommand
+  Full PowerShell command line for uninstall/cleanup. Executed via Invoke-Expression
+  as-is.
+
+
+Sample element:
+{
+  "title": "",
+  "downloadURL": "",
+  "extractTarget": "",
+  "relativeExtractTarget": "",
+  "relativeInstallCommand": "",
+  "installCommand": "",
+  "psInstallCommand": "",
+  "relativeUninstallCommand": "",
+  "uninstallCommand": "",
+  "psUninstallCommand": ""
+}

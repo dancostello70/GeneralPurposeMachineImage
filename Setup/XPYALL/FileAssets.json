@@ -1,0 +1,45 @@
+[
+    {
+        "title" : "Git (Version 2.42.0)" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/Installers_Git-2.42.0.2-64-bit.zip" ,
+        "relativeExtractTarget" : "Installers" ,
+        "relativeInstallCommand" : "Git-2.42.0.2-64-bit.exe /VERYSILENT /NORESTART" ,
+        "uninstallCommand" : "\"C:\\Program Files\\Git\\unins000.exe\" /VERYSILENT /NORESTART"
+    } ,
+    {
+        "title": "Visual Studio Code (Version 1.109.3)" ,
+        "downloadURL": "https://onlcsetup.blob.core.windows.net/setupfiles/VSCodeUserSetup-x64-1.109.3.zip",
+        "relativeExtractTarget": "Installers",
+        "relativeInstallCommand": "VSCodeUserSetup-x64-1.109.3.exe /VERYSILENT /NORESTART /MERGETASKS=!runcode,addcontextmenufiles,addcontextmenufolders,desktopicon /SUPPRESSMSGBOXES",
+        "relativeUninstallCommand": "VSCodeUserSetup-x64-1.109.3.exe /VERYSILENT /NORESTART /uninstall"
+    } ,
+    {
+        "title": "Python (Version 3.14.3)" ,
+        "downloadURL": "https://onlcsetup.blob.core.windows.net/setupfiles/python-3.14.3-amd64.zip",
+        "relativeExtractTarget": "Installers",
+        "relativeInstallCommand": "python-3.14.3-amd64.exe /quiet InstallAllUsers=1 PrependPath=1",
+        "relativeUninstallCommand": "python-3.14.3-amd64.exe /quiet /uninstall"
+    } ,
+    {
+        "title": "The Python Workshop - Second Edition" ,
+        "downloadURL": "https://onlcsetup.blob.core.windows.net/setupfiles/The-Python-Workshop-Second-Edition-main.zip",
+        "extractTarget": "C:\\CourseFiles",
+        "psInstallCommand": "Rename-Item -Path 'C:\\CourseFiles\\The-Python-Workshop-Second-Edition-main' -NewName 'PythonWorkshop'",
+        "psUninstallCommand": "Remove-Item -Path 'C:\\CourseFiles\\PythonWorkshop' -Recurse -Force"
+    } ,
+    {
+        "title": "Murach DSP2 All Files" ,
+        "downloadURL": "https://onlcsetup.blob.core.windows.net/setupfiles/murach_dsp2_allfiles.zip",
+        "extractTarget": "C:\\CourseFiles",
+        "psUninstallCommand": "Remove-Item -Path 'C:\\CourseFiles\\python_analysis' -Recurse -Force"
+    } ,
+    {
+        "title": "Murach PYT2 All Files" ,
+        "downloadURL": "https://onlcsetup.blob.core.windows.net/setupfiles/murach_pyt2_allfiles.zip",
+        "extractTarget": "C:\\CourseFiles",
+        "psInstallCommand": "Rename-Item -Path 'C:\\CourseFiles\\python' -NewName 'python_intro'",
+        "relativeUninstallCommand": "",
+        "uninstallCommand": "",
+        "psUninstallCommand": "Remove-Item -Path 'C:\\CourseFiles\\python_intro' -Recurse -Force"
+    }
+]

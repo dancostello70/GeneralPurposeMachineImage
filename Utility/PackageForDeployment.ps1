@@ -23,7 +23,8 @@ $classesToDeploy = (
     # "XSQL-01-02-v2",
     # "APL300-May25",
     # "RFLI65-v2",
-    "BDXM01-May25",
+    # "BDXM01-May25",
+    "XPYALL",
     "___END___"
 )
 
