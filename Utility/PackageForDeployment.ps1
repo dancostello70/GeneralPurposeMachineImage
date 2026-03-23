@@ -5,7 +5,12 @@ $bigFilesPath = "$rootDir\BigFiles"
 $zipArchivePath = "$rootDir\ZipArchives"
 $targetPath = "$rootDir\DeploymentPackages"
 $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
-$AzCopyParams="sv=2025-07-05&se=2026-03-17T16%3A53%3A50Z&sr=c&sp=rwl&sig=MFhy6KKZTwUEthbMODOti4iY41DtlmATSuoeeFga4rA%3D"
+
+# NOTE: The signature is specific to the setupfiles container and the SAS token used must have write permissions to the container. 
+# If you need to regenerate the signature, you can use the Azure Storage Explorer or Azure Portal to generate a new SAS token with 
+# the appropriate permissions and update the $AzCopyParams variable accordingly.
+$AzCopyParams="sv=2025-07-05&se=2026-04-22T00%3A23%3A14Z&sr=c&sp=rwl&sig=mzYWAteyw%2FvySh9WixUjeMDLS%2FBWCX2PTUXjROPEuUE%3D"
+
 
 
 $classesToDeploy = (
@@ -22,9 +27,9 @@ $classesToDeploy = (
     # "APL300-Oct24",
     # "XSQL-01-02-v2",
     # "APL300-May25",
-    # "RFLI65-v2",
+    "RFLI65-v2",
     # "BDXM01-May25",
-    "XPYALL",
+    # "XPYALL",
     "___END___"
 )
 
@@ -41,7 +46,7 @@ foreach ($item in $classesToDeploy) {
         Write-Host "Compressing $item"
         Compress-Archive -Force ./$item -DestinationPath "$targetPath/$item.zip"
         Write-Host "Uploading $item"
-        c:/Utilities/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --check-length=true --put-md5 --follow-symlinks --disable-auto-decoding=false --recursive --log-level=INFO;   
+        c:/Utilities/azcopy.exe copy "$targetPath/$item.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/$item.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --check-length=true --put-md5 --follow-symlinks --disable-auto-decoding=false --recursive --log-level=INFO;
     }    
 }
 
@@ -69,7 +74,7 @@ $env:AZCOPY_CRED_TYPE = "";
 
 $env:AZCOPY_CRED_TYPE = "Anonymous";
 
-# c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
+# c:/Utilities/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\XALINS.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/XALINS.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;
 
 # CS_DP200
 # c:/Utility/azcopy.exe copy "D:\DC\Clients\ONLC\Projects\GeneralPurposeMachineImage\DeploymentPackages\CS_DP200.zip" "https://onlcsetup.blob.core.windows.net/setupfiles/CS_DP200.zip?$AzCopyParams" --overwrite=true --from-to=LocalBlob --blob-type Detect --follow-symlinks --put-md5 --follow-symlinks --recursive;

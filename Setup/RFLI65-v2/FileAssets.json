@@ -8,7 +8,7 @@
     } ,
     {
         "title" : "Power Automate for Desktop (Current version)" ,
-        "downloadURL" : "https://go.microsoft.com/fwlink/?linkid=2102613" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/installers/Setup.Microsoft.PowerAutomate.exe" ,
         "downloadFileName" : "Setup.Microsoft.PowerAutomate.exe" ,
         "relativeDownloadTarget" : "Installers" ,
         "relativeInstallCommand" : "Setup.Microsoft.PowerAutomate.exe -Silent -Install -ACCEPTEULA" ,
@@ -21,7 +21,7 @@
         "installCommand" : "msiexec /q /i C:\\Setup\\RFLI65-v2\\Installers\\ContosoInvoicingSetup.msi"
     } ,
    {
-        "title" : "Power Automate for Desktop (Current version)" ,
+        "title" : "Course files from GitHub" ,
         "downloadURL" : "https://github.com/ONLC-ClassMaterials/RFLI65-Power-Automate-Intro/archive/refs/heads/main.zip" ,
         "extractTarget" : "c:\\" ,
         "installCommand" : "cmd /c ren c:\\RFLI65-Power-Automate-Intro-main RFLI65-Power-Automate-Intro"
