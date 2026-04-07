@@ -1,16 +1,17 @@
 @echo off
 :: Setup file for APL300 (PL-300: Microsoft Power BI Data Analyst)
-:: Version 3.0
-:: Target Power BI Desktop Version: 2-143 (May 25)
-:: Last update: 2025-07-07
+:: Version 4.0
+:: Target Power BI Desktop Version: 2-149 (Nov 25)
+:: Last update: 2026-04-06
 :: Author: Dan Costello (dan@costellotech.com)
 
 IF "%SETUPROOT%"=="" (SET SETUPROOT=C:\Setup)
-SET CLASSID=APL300-May25
+SET CLASSID=APL300-Nov25
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=D:\Allfiles
 SET PL300DIR=D:\PL-300-Microsoft-Power-BI-Data-Analyst
+SET DOWNLOADSDIR=C:\Users\Student\Downloads
 
 
 :: Start log
@@ -31,12 +32,14 @@ echo Cloning PL-300 GitHub repository
 
 :: Copy all zip files in all subdirectories of D:\PL-300-Microsoft-Power-BI-Data-Analyst-Main\Allfiles\Labs directly into Downloads (no subfolders)
 echo Copying lab zip files to Downloads folder
-if not exist "C:\Users\Student\Downloads" mkdir "C:\Users\Student\Downloads"
-for /R "%PL300DIR%\Allfiles\Labs" %%F in (*.zip) do copy /Y "%%F" "C:\Users\Student\Downloads\"
+if not exist "%DOWNLOADSDIR%" mkdir "%DOWNLOADSDIR%"
+for /R "%PL300DIR%\Allfiles\Labs" %%F in (*.zip) do copy /Y "%%F" "%DOWNLOADSDIR%"
 
 :: Extract all zip files in Downloads
 echo Extracting lab zip files in Downloads folder
-powershell -ExecutionPolicy Bypass -Command "Get-ChildItem C:\Users\Student\Downloads\[01]*.zip | foreach{ Expand-Archive $_ -Force}" -WorkingDirectory "C:\Users\Student\Downloads"
+cd "%DOWNLOADSDIR%"
+powershell -ExecutionPolicy Bypass -Command "Get-ChildItem %DOWNLOADSDIR%\[01]*.zip | foreach{ Expand-Archive $_ -Force }"
+cd %SETUPDIR%
 
 :: Install databases
 :: 2024-07-09 updated to add Allfiles\DBData directory for PL300
