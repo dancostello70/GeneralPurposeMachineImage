@@ -28,6 +28,10 @@
         "title" : "2017 Database scripts" ,
         "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/2017_pub1_pub2_scripts.zip" ,
         "relativeExtractTarget" : "Scripts"
+    },
+    {
+        "title" : "ONLC Install Tester" ,
+        "downloadURL" : "https://github.com/Dan-ONLC/install-tester/archive/refs/heads/main.zip" ,
+        "ExtractTarget" : "C:\\Setup\\"
     }
 ]
-
