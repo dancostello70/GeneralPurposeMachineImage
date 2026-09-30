@@ -32,6 +32,9 @@ xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
 
+:: Verify install
+call %SETUPROOT%\install-tester-main\Run-Tests.ps1 -ConfigPath %SETUPROOT%\install-tester-main\configs\tests.config.xsql01.json
+
 :: Send an alert
 :: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%
 
