@@ -12,6 +12,7 @@ SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=D:\Allfiles
 SET PL300DIR=D:\PL-300-Microsoft-Power-BI-Data-Analyst
 SET DOWNLOADSDIR=C:\Users\Student\Downloads
+SET TEST_CONFIG_FILE=tests.config.pl300.json
 
 
 :: Start log
@@ -51,7 +52,14 @@ echo Copying desktop files
 xcopy /Y %SETUPDIR%\Desktop\*.* %USERPROFILE%\Desktop\
 
 :: Change the Execution Policy
-powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
+:: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SetExecutionPolicy.ps1 
+
+:: Pause for two minutes to let Power BI install complete
+echo Pausing for two minutes to let Power BI install complete
+powershell -ExecutionPolicy Bypass -Command "Start-Sleep -Seconds 120"
+
+:: Verify install
+powershell -ExecutionPolicy Bypass -File %SETUPROOT%\install-tester-main\Run-Tests.ps1 -ConfigPath %SETUPROOT%\install-tester-main\configs\%TEST_CONFIG_FILE%
 
 :: Send an alert
 powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%

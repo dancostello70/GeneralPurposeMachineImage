@@ -9,6 +9,7 @@ SET CLASSID=XSQL-01-02-v2
 SET SETUPDIR=%SETUPROOT%\%CLASSID%
 SET LOGFILE=%SETUPDIR%\SetupLog.log
 SET CLASSDIR=C:\%CLASSID%ClassFiles
+SET TEST_CONFIG_FILE=tests.config.xsql01.json
 
 
 :: Start log
@@ -33,7 +34,7 @@ echo Setting up SQL Server databases
 call %SETUPDIR%\Scripts\SetupDbs.cmd
 
 :: Verify install
-call %SETUPROOT%\install-tester-main\Run-Tests.ps1 -ConfigPath %SETUPROOT%\install-tester-main\configs\tests.config.xsql01.json
+powershell -ExecutionPolicy Bypass -File %SETUPROOT%\install-tester-main\Run-Tests.ps1 -ConfigPath %SETUPROOT%\install-tester-main\configs\%TEST_CONFIG_FILE%
 
 :: Send an alert
 :: powershell -ExecutionPolicy Bypass -File %SETUPDIR%\Scripts\SendAlert.ps1 -ClassId %CLASSID%

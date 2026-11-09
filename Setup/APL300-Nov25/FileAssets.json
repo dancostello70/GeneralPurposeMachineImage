@@ -23,6 +23,11 @@
         "relativeExtractTarget" : "Installers" ,
         "relativeInstallCommand" : "PBIDesktopSetup_x64.exe -q ACCEPT_EULA=1" ,
         "relativeUninstallCommand" : "PBIDesktopSetup_x64.exe -q -norestart -uninstall"
+    },
+    {
+        "title" : "ONLC Install Tester" ,
+        "downloadURL" : "https://github.com/Dan-ONLC/install-tester/archive/refs/heads/main.zip" ,
+        "ExtractTarget" : "C:\\Setup\\"
     }
     
 ]

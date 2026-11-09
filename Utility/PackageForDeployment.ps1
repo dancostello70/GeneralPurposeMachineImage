@@ -24,12 +24,12 @@ $classesToDeploy = (
     #"XFB1NS",
     #"BPBINT-Oct24",
     # "APL300-Oct24",
-    "XSQL-01-02-v2",
+    # "XSQL-01-02-v2",
     # "APL300-May25",
     # "RFLI65-v2",
     # "BDXM01-May25",
     # "XPYALL",
-    # "APL300-Nov25",
+    "APL300-Nov25",
     "___END___"
 )
 
