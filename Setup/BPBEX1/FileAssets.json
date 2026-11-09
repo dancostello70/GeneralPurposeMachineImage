@@ -2,7 +2,7 @@
     {
         "devNotes" : "Updated 2024-08-10 with new files for Jun 2024 version of Power BI Desktop" ,
         "title" : "BPBEX1 Coursefiles" ,
-        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1_StudentFiles_Jun24.zip" ,
+        "downloadURL" : "https://onlcsetup.blob.core.windows.net/setupfiles/BPBEX1-2026-11-06.zip" ,
         "extractTarget" : "C:\\Users\\Student\\Desktop\\BPBEX1" ,
         "uninstallCommand" : "cmd /c rmdir /s /q C:\\Users\\Student\\Desktop\\BPBEX1"
     } ,

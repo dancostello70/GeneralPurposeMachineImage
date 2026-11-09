@@ -9,11 +9,11 @@ $imageComponentsPath = "$rootDir\ImageComponents\XSPLK2\ArchiveSource"
 # NOTE: The signature is specific to the setupfiles container and the SAS token used must have write permissions to the container. 
 # If you need to regenerate the signature, you can use the Azure Storage Explorer or Azure Portal to generate a new SAS token with 
 # the appropriate permissions and update the $AzCopyParams variable accordingly.
-$AzCopyParams="sv=2025-07-05&st=2026-09-30T16%3A21%3A44Z&se=2026-10-30T16%3A36%3A44Z&sr=c&sp=rwl&sig=F2lZ2zV%2FetoQR22neYsPz6i81jpi7Qx5mehRnMR1rXA%3D"
+$AzCopyParams="sv=2025-07-05&st=2026-11-09T15%3A11%3A34Z&se=2026-12-09T15%3A26%3A34Z&sr=c&sp=rwl&sig=%2B6LaFUcod91aI5oYb6dHnS18%2F%2F3sMVbN5j9EQnIgpfo%3D"
 
 
 $classesToDeploy = (
-    # "BPBEX1",
+    "BPBEX1",
     # "A20779",
     # "BPBEX1_new",
     # "BPBINT",
@@ -29,7 +29,7 @@ $classesToDeploy = (
     # "RFLI65-v2",
     # "BDXM01-May25",
     # "XPYALL",
-    "APL300-Nov25",
+    # "APL300-Nov25",
     "___END___"
 )
 
